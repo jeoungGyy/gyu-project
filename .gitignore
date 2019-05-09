@@ -2,7 +2,10 @@
 
 # dependencies
 /node_modules
+/.vscode
+/config
 /.pnp
+/.eslintrc
 .pnp.js
 
 # testing

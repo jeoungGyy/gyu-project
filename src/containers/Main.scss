@@ -1,0 +1,31 @@
+.Main {
+  .header {
+    padding: 30px 20px 10px;
+
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  .contents {
+    margin-top: 20px;
+    padding-right: 400px;
+
+    .list {
+      margin-left: -10px;
+      padding: 0 20px;
+
+      li {
+        width: calc(25% - 20px);
+        margin: 0 0 10px 10px;
+        border: 1px solid #dddfe3;
+        border-radius: 1px;
+        box-shadow: 0 0 3px #f7f7f7;
+
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}

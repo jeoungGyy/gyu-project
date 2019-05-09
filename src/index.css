@@ -1,14 +1,265 @@
-body {
+@charset "utf-8";
+@import url("//cdn.rawgit.com/young-ha/webfont-archive/master/css/Hankyoreh.css");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+header,
+article,
+section,
+aside,
+nav,
+figure,
+figcaption,
+textarea,
+input {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+details,
+menu,
+figure,
+figcaption {
+  display: block;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "Hankyoreh", "Sans-serif";
+  font-size: 14px;
+  color: #000;
+  line-height: 1;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+select {
+  font-size: 100%;
+  vertical-align: middle;
+  background-color: #fff;
+}
+select[disabled] {
+  background-color: #ccc;
+}
+select.invalidate {
+  background-color: #fff1f1;
+}
+
+input[type="submit"] {
+  border: 0;
+  cursor: pointer;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+input[type="file"],
+input[type="text"],
+input[type="password"] {
+  padding-left: 3px;
+  font-size: 100%;
+  vertical-align: middle;
+  border: 1px solid #aaa;
+  background-color: #fff;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ecf9ff;
+}
+input[readonly],
+input[disabled] {
+  background-color: #ccc;
+}
+
+button {
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  color: #000;
+  vertical-align: middle;
+  background: transparent;
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  margin: -1px;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+var,
+em {
+  font-style: normal;
+  font-weight: normal;
+}
+
+textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 100%;
+  border: 1px solid #aaa;
+  border-radius: 0;
+  resize: none;
+}
+textarea[disabled],
+textarea[readonly] {
+  background-color: #ccc;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+legend {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* clear */
+.clearfix::after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  content: ".";
+}
+* html .clearfix {
+  height: 1%;
+}
+.hidden {
+  display: none;
+}
+.visible {
+  position: absolute;
+  top: -9999px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Table */
+caption {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+}
+table th,
+table td {
+  vertical-align: middle;
 }
