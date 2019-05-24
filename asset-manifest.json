@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/gyu-project/static/css/main.cbc0f016.chunk.css",
+    "main.js": "/gyu-project/static/js/main.2256d0a1.chunk.js",
+    "main.js.map": "/gyu-project/static/js/main.2256d0a1.chunk.js.map",
+    "runtime~main.js": "/gyu-project/static/js/runtime~main.2a4a6a92.js",
+    "runtime~main.js.map": "/gyu-project/static/js/runtime~main.2a4a6a92.js.map",
+    "static/css/2.c6231af7.chunk.css": "/gyu-project/static/css/2.c6231af7.chunk.css",
+    "static/js/2.25f8b860.chunk.js": "/gyu-project/static/js/2.25f8b860.chunk.js",
+    "static/js/2.25f8b860.chunk.js.map": "/gyu-project/static/js/2.25f8b860.chunk.js.map",
+    "index.html": "/gyu-project/index.html",
+    "precache-manifest.60551ae59dcedfa68c67bf1cd0b7ac93.js": "/gyu-project/precache-manifest.60551ae59dcedfa68c67bf1cd0b7ac93.js",
+    "service-worker.js": "/gyu-project/service-worker.js",
+    "static/css/2.c6231af7.chunk.css.map": "/gyu-project/static/css/2.c6231af7.chunk.css.map",
+    "static/css/main.cbc0f016.chunk.css.map": "/gyu-project/static/css/main.cbc0f016.chunk.css.map",
+    "static/media/icon_sunny.png": "/gyu-project/static/media/icon_sunny.fac59a59.png",
+    "static/media/project_img.png": "/gyu-project/static/media/project_img.59c61811.png",
+    "static/media/project_img2.png": "/gyu-project/static/media/project_img2.7fc33f78.png",
+    "static/media/project_img3.png": "/gyu-project/static/media/project_img3.3f070f75.png",
+    "static/media/project_img4.png": "/gyu-project/static/media/project_img4.a7c1a0a3.png",
+    "static/media/project_img5.png": "/gyu-project/static/media/project_img5.4ff5dbeb.png",
+    "static/media/project_img6.png": "/gyu-project/static/media/project_img6.6a087c79.png",
+    "static/media/react_logo.svg": "/gyu-project/static/media/react_logo.ee7cd8ed.svg"
+  }
+}
