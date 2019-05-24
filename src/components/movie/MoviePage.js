@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
+import { Link } from 'react-router-dom';
 
 import { Icon } from 'react-icons-kit';
 import { ic_error } from 'react-icons-kit/md';
@@ -119,6 +120,7 @@ class MoviePageDay extends Component {
           audiAcc={info.audiAcc}
           scrnCnt={info.scrnCnt}
           showCnt={info.showCnt}
+          photo={info.photo}
         />
       );
     });
@@ -271,6 +273,28 @@ class MoviePageDay extends Component {
             )}
           </>
         )}
+
+        <div className="home_btn">
+          <p>
+            자료제공:{' '}
+            <Link
+              to={{
+                pathname:
+                  'http://www.kobis.or.kr/kobisopenapi/homepg/main/main.do'
+              }}
+              target="_blank"
+            >
+              영화진흥위원회
+            </Link>
+          </p>
+          <Link
+            to={{
+              pathname: '/'
+            }}
+          >
+            메인
+          </Link>
+        </div>
       </div>
     );
   }

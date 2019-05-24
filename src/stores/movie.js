@@ -1,9 +1,9 @@
 import { observable, action } from 'mobx';
 import * as api from '../lib/api';
-// import imageData from '../lib/movieImages.json';
+import imageData from '../lib/movieImages.json';
 
 export default class MoveStore {
-  @observable movieDaily = {
+  @observable.ref movieDaily = {
     dailyBoxOfficeList: []
   };
   @observable movieWeekly = {
@@ -19,6 +19,7 @@ export default class MoveStore {
   @observable movieActNameSearch = {
     peopleList: []
   };
+
   @observable layer = false; // 레이어 팝업 On/Off
   @observable targetName = ''; // 한국(K)/외국(F) 영화 선택
 
@@ -70,11 +71,37 @@ export default class MoveStore {
         const response = await api.movieData(repData, this.day);
         const data = response.data.boxOfficeResult;
         this.movieDaily = data;
+
+        imageData.map((currElement, i) => {
+          let index = this.movieDaily.dailyBoxOfficeList.findIndex(
+            infomation => infomation.movieCd === currElement.id
+          );
+          let selected = this.movieDaily.dailyBoxOfficeList[index];
+          if (!selected) {
+          } else {
+            selected.photo = true;
+          }
+
+          return false;
+        });
       } else {
         this.dayWeekend = true;
         const response = await api.movieWeekendData(repData, this.day);
         const data = response.data.boxOfficeResult;
         this.movieWeekly = data;
+
+        imageData.map((currElement, i) => {
+          let index = this.movieWeekly.weeklyBoxOfficeList.findIndex(
+            infomation => infomation.movieCd === currElement.id
+          );
+          let selected = this.movieWeekly.weeklyBoxOfficeList[index];
+          if (!selected) {
+          } else {
+            selected.photo = true;
+          }
+
+          return false;
+        });
       }
       this.layer = true;
       this.listChange = false;

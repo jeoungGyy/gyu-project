@@ -18,13 +18,18 @@ const MoviePageList = ({
   audiChange,
   audiAcc,
   scrnCnt,
-  showCnt
+  showCnt,
+  photo
 }) => {
   return (
     <li>
       <div className="poa">
         <div className="poster">
-          <Icon icon={ic_insert_photo} title="" />
+          {!photo ? (
+            <Icon icon={ic_insert_photo} title="" />
+          ) : (
+            <img src={require(`../../images/movie/${movieCd}.jpg`)} alt="" />
+          )}
         </div>
         <i className="rank">{rank}</i>
         <i className="rankInten">

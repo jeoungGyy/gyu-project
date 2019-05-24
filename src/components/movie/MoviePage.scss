@@ -293,4 +293,21 @@
       }
     }
   }
+
+  .home_btn {
+    margin-top: 30px;
+    position: relative;
+
+    p {
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+    > a {
+      display: inline-block;
+      padding: 10px 50px;
+      border: 1px solid #bb9726;
+      background-color: #f9c00c;
+    }
+  }
 }
