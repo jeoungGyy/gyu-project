@@ -1,0 +1,122 @@
+#root {
+  .movie {
+    width: 490px;
+    background-color: none;
+
+    .area {
+      .box {
+        position: relative;
+        height: 180px;
+        padding: 13px 35px 10px;
+        color: #fff;
+        background-color: #333;
+        background-image: url(../../images/movie_blet.png),
+          url(../../images/movie_blet.png);
+        background-position: left top, right top;
+        background-repeat: repeat-y;
+        border-radius: 6px;
+
+        .title {
+          font-size: 15px;
+          color: #fff400;
+        }
+        .wtable {
+          margin-top: 5px;
+          table-layout: fixed;
+
+          thead {
+            tr {
+              th {
+                padding: 2px 0 7px;
+                font-size: 12px;
+                font-weight: normal;
+                text-align: center;
+                border-bottom: 1px solid #565656;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                padding: 5px 0;
+                font-size: 12px;
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                &.txt_left {
+                  text-align: left;
+                }
+                &.txt_right {
+                  text-align: right;
+                }
+
+                span {
+                  &.blue {
+                    color: blue;
+                  }
+                  &.red {
+                    color: red;
+                  }
+                  &.new {
+                    color: #fbf302;
+                  }
+                }
+              }
+            }
+            tr:first-child {
+              td {
+                padding-top: 10px;
+              }
+            }
+          }
+        }
+        .round {
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 36px;
+          height: 36px;
+
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 0 1px 5px #bbb;
+
+          &.left {
+            margin: 0 0 -17px -41px;
+
+            img {
+              width: 45px;
+              height: 45px;
+              margin: -4px 0 0 -4px;
+            }
+          }
+          &.right {
+            margin: 0 0 -17px 5px;
+
+            img {
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+      a {
+        margin-top: -3px;
+        padding: 7px 0 15px;
+        border: 1px solid #ddd;
+        border-top: none;
+
+        &:hover {
+          margin-top: -4px;
+          color: #283252;
+          border: 1px solid #64b0d6;
+
+          .t {
+            color: #088cce;
+          }
+        }
+      }
+    }
+  }
+}

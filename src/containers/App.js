@@ -1,14 +1,18 @@
-import React from 'react';
-import DevTools from 'mobx-react-devtools';
+import React, { Component } from 'react';
+// import DevTools from 'mobx-react-devtools';
 import PageRouter from './PageRouter';
+import Blind from './Blind';
 
-const App = () => {
-  return (
-    <div>
-      <PageRouter />
-      {process.env.NODE_ENV === 'development' && <DevTools />}
-    </div>
-  );
-};
+class App extends Component {
+  render() {
+    return (
+      <>
+        <PageRouter />
+        <Blind />
+        {/* {process.env.NODE_ENV === 'development' && <DevTools />} */}
+      </>
+    );
+  }
+}
 
 export default App;

@@ -1,0 +1,61 @@
+.blind {
+  .move {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 0;
+    background-color: #0ac2d2;
+    animation: moveUpDown 1s forwards;
+
+    &.active {
+      animation: moveDownUp 1s forwards;
+    }
+    @keyframes moveUpDown {
+      0% {
+        bottom: 0;
+        height: 100%;
+      }
+      30% {
+        height: 100%;
+      }
+      100% {
+        height: 0;
+      }
+    }
+    @keyframes moveDownUp {
+      0% {
+        top: initial;
+        bottom: 0;
+        height: 0;
+      }
+      30% {
+        height: 100%;
+      }
+      100% {
+        height: 100%;
+      }
+    }
+  }
+
+  // @keyframes moveDownUp {
+  //   0% {
+  //     bottom: 0;
+  //     height: 0;
+  //   }
+  //   30% {
+  //     height: 100%;
+  //   }
+  //   50% {
+  //     height: 100%;
+  //   }
+  //   80% {
+  //     height: 100%;
+  //   }
+  //   100% {
+  //     top: 0;
+  //     height: 0;
+  //   }
+  // }
+}

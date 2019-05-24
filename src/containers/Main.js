@@ -1,41 +1,78 @@
 import React, { Component } from 'react';
+import { inject, observer } from 'mobx-react';
 import Masonry from 'react-masonry-component';
-import { Link } from 'react-router-dom';
-import Todo from './Todo';
+
+import Header from './Header';
+import WeatherItem from '../components/weather/WeatherItem';
+import {
+  FreeFonts,
+  TimeLine,
+  CardHistory,
+  Todo,
+  PublishV2,
+  PublishV1
+} from '../components/linkpage';
+import MovieItem from '../components/movie/MovieItem';
 import './Main.scss';
 
+@inject('common')
+@observer
 class Main extends Component {
+  // componentDidMount() {
+  //   const { common } = this.props;
+  //   console.log(common.root.common.loading);
+  // }
+
+  delayMovie = () => {
+    const {
+      history: { push }
+    } = this.props;
+    const { common } = this.props;
+    common.loadingDelay(push);
+    // push('/movie');
+    // setTimeout(() => push('/movie'), 1000);
+
+    // const { common } = this.props;
+    // const { loading } = this.props.common.root.common;
+
+    // if (!loading) {
+    //   common.loadingDelay();
+    // } else {
+    //   console.log('22');
+    // }
+  };
+
   render() {
     const masonryOptions = {
-      transitionDuration: 200
+      transitionDuration: 200,
+      columnWidth: 250,
+      gutter: 10,
+      initLayout: false
     };
+
     return (
       <div className="Main">
-        <header className="header">
-          <h1>퍼블리셔 작업 폴더</h1>
-        </header>
-        <section className="contents">
-          <Masonry
-            className={'list'} // default ''
-            elementType={'ul'} // default 'div'
-            options={masonryOptions} // default {}
-          >
-            <li>
-              <Link to={{ pathname: '/weather' }}>
-                <div className="img">111</div>
-                <div className="summary">
-                  <p>22222</p>
-                  <p>2019.01.02</p>
-                </div>
-              </Link>
-            </li>
-            <li>gggggggggggggg</li>
-            <li>11111</li>
-            <li>11111</li>
-            <li>11111</li>
-          </Masonry>
-        </section>
-        <Todo />
+        <div>
+          <Header />
+          <section className="contents">
+            <Masonry
+              className={'list'} // default ''
+              elementType={'ul'} // default 'div'
+              options={masonryOptions} // default {}
+            >
+              <WeatherItem />
+              <FreeFonts />
+              <MovieItem history={this.props.history} />
+              <TimeLine />
+              <CardHistory />
+              <Todo />
+              <PublishV2 />
+              <PublishV1 />
+
+              <li>11111</li>
+            </Masonry>
+          </section>
+        </div>
       </div>
     );
   }

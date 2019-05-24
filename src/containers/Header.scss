@@ -1,0 +1,29 @@
+.header {
+  padding: 40px 20px 30px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 4px #eaeaea;
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    margin-top: 10px;
+    color: #999;
+  }
+
+  .icons {
+    margin-top: 5px;
+
+    i {
+      margin: 0 2px;
+
+      svg {
+        width: 20px;
+        height: auto;
+        color: #999;
+      }
+    }
+  }
+}

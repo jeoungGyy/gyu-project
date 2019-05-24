@@ -1,29 +1,106 @@
 .Main {
-  .header {
-    padding: 30px 20px 10px;
-
-    h1 {
-      font-size: 20px;
-    }
-  }
-
   .contents {
     margin-top: 20px;
-    padding-right: 400px;
 
     .list {
-      margin-left: -10px;
-      padding: 0 20px;
+      padding: 20px 40px;
 
-      li {
-        width: calc(25% - 20px);
-        margin: 0 0 10px 10px;
-        border: 1px solid #dddfe3;
+      > li {
+        // width: calc(25% - 20px);
+        width: 230px;
+        margin-bottom: 30px;
+        background-color: #fff;
         border-radius: 1px;
-        box-shadow: 0 0 3px #f7f7f7;
 
         a {
           display: block;
+          height: 100%;
+          padding: 15px;
+          border: 1px solid #ddd;
+
+          .img {
+            position: relative;
+
+            .round {
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              width: 36px;
+              height: 36px;
+              margin: 0 0 -13px -18px;
+              background-color: #fff;
+              border-radius: 50%;
+              box-shadow: 0 1px 5px #bbb;
+
+              img {
+                width: 45px;
+                height: 45px;
+                margin: -4px 0 0 -4px;
+              }
+
+              &.html5 {
+                padding: 13px 0 0 11px;
+
+                img {
+                  width: 22px;
+                  height: 22px;
+                }
+              }
+            }
+
+            > img {
+              max-width: 100%;
+              height: auto;
+              border-radius: 3px;
+            }
+          }
+          .summary {
+            margin-top: 22px;
+
+            .line {
+              text-align: center;
+
+              .t {
+                font-size: 17px;
+
+                i {
+                  margin-top: -1px;
+                  color: #777;
+                  vertical-align: text-top;
+                }
+              }
+              .u {
+                margin-top: 10px;
+                font-size: 13px;
+                color: #777;
+              }
+              .s {
+                margin-top: 5px;
+                font-size: 12px;
+                color: #777;
+              }
+            }
+          }
+
+          &:hover {
+            color: #283252;
+            border: 1px solid #64b0d6;
+
+            .t {
+              color: #088cce;
+            }
+          }
+        }
+
+        &.other {
+          padding-top: 10px;
+          text-align: center;
+          border: none;
+          background-color: inherit;
+
+          .react-clock {
+            margin: 0 auto;
+          }
         }
       }
     }
