@@ -9,7 +9,7 @@ const CardHistory = () => {
     <li>
       <Link
         to={{
-          pathname: '//d2wz52cyqa4zgb.cloudfront.net/index.html'
+          pathname: 'https://d2wz52cyqa4zgb.cloudfront.net/index.html'
         }}
         target="_blank"
       >

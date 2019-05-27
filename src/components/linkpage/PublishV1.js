@@ -8,7 +8,7 @@ const PublishV1 = () => {
     <li>
       <Link
         to={{
-          pathname: '//limjungk.cafe24.com/document/main.html'
+          pathname: 'http://limjungk.cafe24.com/document/main.html'
         }}
         target="_blank"
       >

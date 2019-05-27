@@ -9,7 +9,7 @@ const FreeFonts = () => {
     <li>
       <Link
         to={{
-          pathname: '//jeounggyy.github.io/free-fonts/'
+          pathname: 'https://jeounggyy.github.io/free-fonts/'
         }}
         target="_blank"
       >

@@ -9,7 +9,7 @@ const TimeLine = () => {
     <li>
       <Link
         to={{
-          pathname: '//d1d7owdiau2n6k.cloudfront.net/index.html'
+          pathname: 'https://d1d7owdiau2n6k.cloudfront.net/index.html'
         }}
         target="_blank"
       >
