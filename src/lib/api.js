@@ -17,7 +17,7 @@ export function weatherData(year, hours) {
   }
   // console.log(hours);
   return axios.get(
-    `http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?ServiceKey=${
+    `https://cors-anywhere.herokuapp.com/http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?ServiceKey=${
       process.env.REACT_APP_WEATHER_SERVICE_KEY
     }&base_date=${year}&base_time=${hours}00&nx=61&ny=126&_type=json`
   );
@@ -27,7 +27,7 @@ export function movieData(repData, date) {
   // console.log('repData' + repData);
   // console.log('day' + date);
   return axios.get(
-    `https://cors-anywhere.herokuapp.com/http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${
+    `https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${
       process.env.REACT_APP_MOVIE_SERVICE_KEY
     }&targetDt=${date}&repNationCd=${repData}`
   );
@@ -36,7 +36,7 @@ export function movieData(repData, date) {
 export function movieWeekendData(repData, date) {
   // console.log('Week' + date);
   return axios.get(
-    `https://cors-anywhere.herokuapp.com/http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=${
+    `https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=${
       process.env.REACT_APP_MOVIE_SERVICE_KEY
     }&targetDt=${date}&repNationCd=${repData}`
   );
@@ -44,7 +44,7 @@ export function movieWeekendData(repData, date) {
 
 export function movieSearch(selectChoice, inputChoice, moreList) {
   return axios.get(
-    `https://cors-anywhere.herokuapp.com/http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=${
+    `https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=${
       process.env.REACT_APP_MOVIE_SERVICE_KEY
     }&${selectChoice}=${inputChoice}&curPage=${moreList}`
   );
@@ -52,7 +52,7 @@ export function movieSearch(selectChoice, inputChoice, moreList) {
 
 export function movieActSearch(actName, moreActList) {
   return axios.get(
-    `https://cors-anywhere.herokuapp.com/http://www.kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleList.json?key=${
+    `https://www.kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleList.json?key=${
       process.env.REACT_APP_MOVIE_SERVICE_KEY
     }&peopleNm=${actName}&curPage=${moreActList}`
   );

@@ -1,15 +1,17 @@
-import { observable, action } from 'mobx';
+import { observable } from 'mobx';
 
 export default class clock {
   @observable date = new Date();
 
   constructor(root) {
     this.root = root;
-    this.setIntervalTime(); // 임시
+    // this.setIntervalTime();
   }
 
-  @action
-  setIntervalTime = () => {
-    this.date = new Date();
-  };
+  // @action
+  // setIntervalTime = () => {
+  //   setInterval(() => {
+  //     this.date = new Date();
+  //   }, 1000);
+  // };
 }

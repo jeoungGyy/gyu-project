@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Icon } from 'react-icons-kit';
 import { ic_launch } from 'react-icons-kit/md';
 import ReactSVG from '../../images/react_logo.svg';
@@ -7,11 +6,10 @@ import ReactSVG from '../../images/react_logo.svg';
 const CardHistory = () => {
   return (
     <li>
-      <Link
-        to={{
-          pathname: 'https://d2wz52cyqa4zgb.cloudfront.net/index.html'
-        }}
+      <a
+        href="//d2wz52cyqa4zgb.cloudfront.net/index.html"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <div className="img">
           <img src={require('../../images/project_img3.png')} alt="" />
@@ -28,7 +26,7 @@ const CardHistory = () => {
             <p className="s">2018.12.06</p>
           </div>
         </div>
-      </Link>
+      </a>
     </li>
   );
 };

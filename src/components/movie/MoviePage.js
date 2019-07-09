@@ -246,7 +246,11 @@ class MoviePageDay extends Component {
                   더 보기
                 </button>
               </div>
-              {subLoading && <div className="spinner" />}
+              {subLoading && (
+                <div className="spinner_area">
+                  <div className="spinner" />
+                </div>
+              )}
             </>
           )
         ) : !movie.movieInSearch.movieList.length ? (

@@ -70,31 +70,30 @@ export default class MoveStore {
         this.dayWeekend = false;
         const response = await api.movieData(repData, this.day);
         const data = response.data.boxOfficeResult;
-        this.movieDaily = data;
 
         imageData.map((currElement, i) => {
-          let index = this.movieDaily.dailyBoxOfficeList.findIndex(
+          let index = data.dailyBoxOfficeList.findIndex(
             infomation => infomation.movieCd === currElement.id
           );
-          let selected = this.movieDaily.dailyBoxOfficeList[index];
+          let selected = data.dailyBoxOfficeList[index];
           if (!selected) {
           } else {
             selected.photo = true;
           }
-
           return false;
         });
+
+        this.movieDaily = data;
       } else {
         this.dayWeekend = true;
         const response = await api.movieWeekendData(repData, this.day);
         const data = response.data.boxOfficeResult;
-        this.movieWeekly = data;
 
         imageData.map((currElement, i) => {
-          let index = this.movieWeekly.weeklyBoxOfficeList.findIndex(
+          let index = data.weeklyBoxOfficeList.findIndex(
             infomation => infomation.movieCd === currElement.id
           );
-          let selected = this.movieWeekly.weeklyBoxOfficeList[index];
+          let selected = data.weeklyBoxOfficeList[index];
           if (!selected) {
           } else {
             selected.photo = true;
@@ -102,7 +101,9 @@ export default class MoveStore {
 
           return false;
         });
+        this.movieWeekly = data;
       }
+
       this.layer = true;
       this.listChange = false;
       this.searchToggle = false;

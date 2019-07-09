@@ -23,8 +23,9 @@
           .t {
             font-size: 52px;
 
-            span {
-              font-size: 14px;
+            .ampm {
+              margin-left: 3px;
+              font-size: 20px;
             }
           }
           .w {
@@ -50,7 +51,6 @@
           }
           .o {
             margin-top: 10px;
-            font-size: 18px;
             text-align: center;
 
             i {
@@ -89,6 +89,11 @@
               i {
                 margin-top: -4px;
                 font-size: 36px;
+              }
+              .small {
+                display: block;
+                margin-top: -px;
+                font-size: 26px;
               }
             }
           }

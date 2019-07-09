@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Icon } from 'react-icons-kit';
 import { ic_launch } from 'react-icons-kit/md';
 import ReactSVG from '../../images/react_logo.svg';
@@ -7,11 +6,10 @@ import ReactSVG from '../../images/react_logo.svg';
 const TimeLine = () => {
   return (
     <li>
-      <Link
-        to={{
-          pathname: 'https://d1d7owdiau2n6k.cloudfront.net/index.html'
-        }}
+      <a
+        href="//d1d7owdiau2n6k.cloudfront.net/index.html"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <div className="img">
           <img src={require('../../images/project_img2.png')} alt="" />
@@ -28,7 +26,7 @@ const TimeLine = () => {
             <p className="s">2019.02.13</p>
           </div>
         </div>
-      </Link>
+      </a>
     </li>
   );
 };

@@ -12,9 +12,7 @@ const Header = () => {
   return (
     <header className="header">
       <h1>임정규 작업 폴더</h1>
-      <p>
-        헌법재판소의 장은 국회의 동의를 얻어 재판관중에서 대통령이 임명한다.
-      </p>
+      <p>머리에서 생각하는 속도와 말하는 속도를 비슷하게 맞춰라.</p>
       <div className="icons">
         <Icon icon={ic_alarm} />
         <Icon icon={ic_alarm_add} />

@@ -1,16 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Icon } from 'react-icons-kit';
 import { ic_launch } from 'react-icons-kit/md';
 
 const PublishV2 = () => {
   return (
     <li>
-      <Link
-        to={{
-          pathname: 'http://limjungk.cafe24.com/document/new.html'
-        }}
+      <a
+        href="http://limjungk.cafe24.com/document/new.html"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <div className="img">
           <img src={require('../../images/project_img5.png')} alt="" />
@@ -30,7 +28,7 @@ const PublishV2 = () => {
             <p className="s">2016.04.25</p>
           </div>
         </div>
-      </Link>
+      </a>
     </li>
   );
 };

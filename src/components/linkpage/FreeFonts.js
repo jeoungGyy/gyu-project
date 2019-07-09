@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Icon } from 'react-icons-kit';
 import { ic_launch } from 'react-icons-kit/md';
 import ReactSVG from '../../images/react_logo.svg';
@@ -7,11 +6,10 @@ import ReactSVG from '../../images/react_logo.svg';
 const FreeFonts = () => {
   return (
     <li>
-      <Link
-        to={{
-          pathname: 'https://jeounggyy.github.io/free-fonts/'
-        }}
+      <a
+        href="//jeounggyy.github.io/free-fonts"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <div className="img">
           <img src={require('../../images/project_img.png')} alt="" />
@@ -28,7 +26,7 @@ const FreeFonts = () => {
             <p className="s">2019.04.17</p>
           </div>
         </div>
-      </Link>
+      </a>
     </li>
   );
 };
