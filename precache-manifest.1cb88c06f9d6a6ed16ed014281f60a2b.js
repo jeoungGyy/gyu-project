@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6282d278cfb55a3a742714f5b04738ca",
+    "revision": "28dbaf87b1a0c594dfb23d4907047e17",
     "url": "/gyu-project/index.html"
   },
   {
-    "revision": "7488a3a017a92a1cdf8c",
+    "revision": "31db474013248c14302b",
     "url": "/gyu-project/static/css/2.c6231af7.chunk.css"
   },
   {
-    "revision": "1d538c07b9ea8c2ce42e",
-    "url": "/gyu-project/static/css/main.5399d6d2.chunk.css"
+    "revision": "7f76c4b73b26ec2c9ec3",
+    "url": "/gyu-project/static/css/main.2de470aa.chunk.css"
   },
   {
-    "revision": "7488a3a017a92a1cdf8c",
-    "url": "/gyu-project/static/js/2.3ecbffcb.chunk.js"
+    "revision": "31db474013248c14302b",
+    "url": "/gyu-project/static/js/2.85b1d0d0.chunk.js"
   },
   {
-    "revision": "1d538c07b9ea8c2ce42e",
-    "url": "/gyu-project/static/js/main.6384cc9b.chunk.js"
+    "revision": "7f76c4b73b26ec2c9ec3",
+    "url": "/gyu-project/static/js/main.8ff45b11.chunk.js"
   },
   {
     "revision": "1829e5258d84f5e2c28d",
@@ -52,6 +52,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gyu-project/static/media/20184082.9f9f842a.jpg"
   },
   {
+    "revision": "6b1ae186f2d159358ee135dcdc085567",
+    "url": "/gyu-project/static/media/20184462.6b1ae186.jpg"
+  },
+  {
+    "revision": "6b80819658c81bbed50ca9cbf7f6ce17",
+    "url": "/gyu-project/static/media/20184543.6b808196.jpg"
+  },
+  {
     "revision": "d28b1959d9463a19f243a34bbfb72d9b",
     "url": "/gyu-project/static/media/20184621.d28b1959.jpg"
   },
@@ -64,6 +72,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gyu-project/static/media/20184889.6a4b83d4.jpg"
   },
   {
+    "revision": "7d67dc08c36ed2a216d075b6c3b0fe4e",
+    "url": "/gyu-project/static/media/20185985.7d67dc08.jpg"
+  },
+  {
     "revision": "224c61c67ceb9f3ad66091ae32c75e78",
     "url": "/gyu-project/static/media/20188941.224c61c6.jpg"
   },
@@ -74,6 +86,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f379b181ba38cde0bd4de264b645b2fd",
     "url": "/gyu-project/static/media/20196655.f379b181.jpg"
+  },
+  {
+    "revision": "847a641493f57da7b8643199c74d2065",
+    "url": "/gyu-project/static/media/20196850.847a6414.jpg"
   },
   {
     "revision": "4e87046ba982221577373200d9dfeed8",
