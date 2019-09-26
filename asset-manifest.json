@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/gyu-project/static/css/main.d02d3c8a.chunk.css",
-    "main.js": "/gyu-project/static/js/main.cf60ff6b.chunk.js",
+    "main.css": "/gyu-project/static/css/main.205ccda0.chunk.css",
+    "main.js": "/gyu-project/static/js/main.64d03188.chunk.js",
     "runtime~main.js": "/gyu-project/static/js/runtime~main.2a4a6a92.js",
     "static/css/2.aa07f589.chunk.css": "/gyu-project/static/css/2.aa07f589.chunk.css",
-    "static/js/2.b11be324.chunk.js": "/gyu-project/static/js/2.b11be324.chunk.js",
+    "static/js/2.42be3ea4.chunk.js": "/gyu-project/static/js/2.42be3ea4.chunk.js",
     "index.html": "/gyu-project/index.html",
-    "precache-manifest.5c85d7d1d8d2fe54d9ebfa3d487b0ac2.js": "/gyu-project/precache-manifest.5c85d7d1d8d2fe54d9ebfa3d487b0ac2.js",
+    "precache-manifest.aaaa070f32df21509904d59030f5b091.js": "/gyu-project/precache-manifest.aaaa070f32df21509904d59030f5b091.js",
     "service-worker.js": "/gyu-project/service-worker.js",
     "static/media/20175771.jpg": "/gyu-project/static/media/20175771.847f2111.jpg",
     "static/media/20180442.jpg": "/gyu-project/static/media/20180442.ef358f13.jpg",
@@ -35,6 +35,7 @@
     "static/media/project_img4.png": "/gyu-project/static/media/project_img4.a7c1a0a3.png",
     "static/media/project_img5.png": "/gyu-project/static/media/project_img5.4ff5dbeb.png",
     "static/media/project_img6.png": "/gyu-project/static/media/project_img6.6a087c79.png",
+    "static/media/project_img7.png": "/gyu-project/static/media/project_img7.162f5929.png",
     "static/media/react_logo.svg": "/gyu-project/static/media/react_logo.ee7cd8ed.svg"
   }
 }
