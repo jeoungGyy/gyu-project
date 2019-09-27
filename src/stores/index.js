@@ -3,6 +3,8 @@ import PostStore from './post';
 import MovieStore from './movie';
 import ClockStore from './clock';
 import WeatherStore from './weather';
+import Gold from './gold';
+import Lotto from './lotto';
 
 class RootStore {
   constructor() {
@@ -11,6 +13,8 @@ class RootStore {
     this.post = new PostStore(this);
     this.movie = new MovieStore(this);
     this.weather = new WeatherStore(this);
+    this.gold = new Gold(this);
+    this.lotto = new Lotto(this);
   }
 }
 

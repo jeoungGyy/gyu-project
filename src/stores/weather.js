@@ -6,7 +6,7 @@ export default class weather {
 
   constructor(root) {
     this.root = root;
-    this.weatherList();
+    // this.weatherList();
   }
 
   @action

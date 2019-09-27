@@ -2,7 +2,7 @@ import { observable, action } from 'mobx';
 import * as api from '../lib/api';
 import imageData from '../lib/movieImages.json';
 
-export default class MoveStore {
+export default class MovieStore {
   @observable.ref movieDaily = {
     dailyBoxOfficeList: []
   };
@@ -13,9 +13,6 @@ export default class MoveStore {
     inputChoiceClone: '',
     movieList: []
   };
-  // @observable movieInSearchDetail = {
-  //   movieList: []
-  // };
   @observable movieActNameSearch = {
     peopleList: []
   };
@@ -36,10 +33,10 @@ export default class MoveStore {
 
   @observable moreList = 1; // 영화, 감독명 더보기 페이지 숫자에 사용
   @observable moreActList = 1; // 배우명 더보기 페이지 숫자에 사용
-  // @observable movieCode = ''; // 상세검색을 위한 코드 저장
 
   constructor(root) {
     this.root = root;
+
     this.actMovieList();
   }
 

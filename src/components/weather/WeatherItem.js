@@ -24,7 +24,7 @@ class WeatherItem extends Component {
       '토요일(SAT)'
     ];
     let year = date.getFullYear();
-    let month = date.getMonth();
+    let month = date.getMonth() + 1;
     let dateDay = date.getDate();
     let day = week[date.getDay()];
     let h = date.getHours();

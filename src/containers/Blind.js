@@ -6,10 +6,13 @@ import './Blind.scss';
 @observer
 class Blind extends Component {
   render() {
-    const { loading } = this.props.common.root.common;
+    const { loading, random, randomColor } = this.props.common.root.common;
+
     return (
       <div className="blind">
-        <div className={`move ${loading && 'active'}`} />
+        <div
+          className={`move ${random} ${loading && 'active'} ${randomColor}`}
+        />
       </div>
     );
   }

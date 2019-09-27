@@ -1,40 +1,97 @@
 .blind {
   .move {
     position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    height: 0;
-    background-color: #0ac2d2;
-    animation: moveUpDown 1s forwards;
 
-    &.active {
-      animation: moveDownUp 1s forwards;
+    &.red {
+      background-color: #c43445;
     }
-    @keyframes moveUpDown {
-      0% {
-        bottom: 0;
-        height: 100%;
+    &.blue {
+      background-color: #0ac2d2;
+    }
+    &.yellow {
+      background-color: #f0c740;
+    }
+    &.green {
+      background-color: #83e113;
+    }
+    &.purple {
+      background-color: #db73d6;
+    }
+    &.gray {
+      background-color: #aaaaaa;
+    }
+
+    &.a {
+      left: 0;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      height: 0;
+      animation: moveUpDown 1s forwards;
+
+      &.active {
+        animation: moveDownUp 1s forwards;
       }
-      30% {
-        height: 100%;
+      @keyframes moveUpDown {
+        0% {
+          bottom: 0;
+          height: 100%;
+        }
+        30% {
+          height: 100%;
+        }
+        100% {
+          height: 0;
+        }
       }
-      100% {
-        height: 0;
+      @keyframes moveDownUp {
+        0% {
+          top: initial;
+          bottom: 0;
+          height: 0;
+        }
+        30% {
+          height: 100%;
+        }
+        100% {
+          height: 100%;
+        }
       }
     }
-    @keyframes moveDownUp {
-      0% {
-        top: initial;
-        bottom: 0;
-        height: 0;
+
+    &.b {
+      top: 0;
+      z-index: 10;
+      width: 0;
+      height: 100%;
+      animation: moveLeftRight 1s forwards;
+
+      &.active {
+        animation: moveRightLeft 1s forwards;
       }
-      30% {
-        height: 100%;
+      @keyframes moveLeftRight {
+        0% {
+          right: 0;
+          width: 100%;
+        }
+        30% {
+          width: 100%;
+        }
+        100% {
+          width: 0;
+        }
       }
-      100% {
-        height: 100%;
+      @keyframes moveRightLeft {
+        0% {
+          right: 0;
+          width: 0;
+        }
+        30% {
+          width: 100%;
+        }
+        100% {
+          width: 100%;
+        }
       }
     }
   }

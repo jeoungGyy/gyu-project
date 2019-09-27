@@ -20,6 +20,15 @@ let totCnt;
 @inject('movie')
 @observer
 class MoviePageDay extends Component {
+  delayPageMove = (pageName, e) => {
+    e.preventDefault();
+    const {
+      history: { push }
+    } = this.props;
+    const { common } = this.props.movie.root;
+    common.loadingDelay(push, pageName);
+  };
+
   handleMovieList = e => {
     const { movie } = this.props;
     movie.actMovieList(e.target.value);
@@ -75,6 +84,7 @@ class MoviePageDay extends Component {
 
   render() {
     const {
+      delayPageMove,
       handleMovieList,
       handleDayLayerToggle,
       handleDayChange,
@@ -281,20 +291,19 @@ class MoviePageDay extends Component {
         <div className="home_btn">
           <p>
             자료제공:{' '}
-            <Link
-              to={{
-                pathname:
-                  'http://www.kobis.or.kr/kobisopenapi/homepg/main/main.do'
-              }}
+            <a
+              href="http://www.kobis.or.kr/kobisopenapi/homepg/main/main.do"
               target="_blank"
+              rel="noopener noreferrer"
             >
               영화진흥위원회
-            </Link>
+            </a>
           </p>
           <Link
             to={{
-              pathname: '/'
+              pathname: ''
             }}
+            onClick={e => delayPageMove('', e)}
           >
             메인
           </Link>

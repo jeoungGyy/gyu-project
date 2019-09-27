@@ -1,0 +1,83 @@
+[
+  {
+    "number": 1,
+    "name": "스파",
+    "total": 35,
+    "auto": 25,
+    "manual": 9,
+    "semiauto": 1,
+    "latlng": "서울 노원구 상계동 666-3 주공10단지종합상가111"
+  },
+  {
+    "number": 2,
+    "name": "부일카서비스",
+    "total": 34,
+    "auto": 22,
+    "manual": 12,
+    "semiauto": 0,
+    "latlng": "부산 동구 범일동 830-195번지"
+  },
+  {
+    "number": 3,
+    "name": "까치복권방",
+    "total": 5,
+    "auto": 2,
+    "manual": 3,
+    "semiauto": 0,
+    "latlng": "경기 시흥시 정왕동 1782-18번지 1층102"
+  },
+  {
+    "number": 4,
+    "name": "다니엘사1",
+    "total": 5,
+    "auto": 3,
+    "manual": 2,
+    "semiauto": 0,
+    "latlng": "경기 안산시 단원구 초지동 796 101호"
+  },
+  {
+    "number": 5,
+    "name": "대광복권방",
+    "total": 5,
+    "auto": 3,
+    "manual": 2,
+    "semiauto": 0,
+    "latlng": "전남 화순군 화순읍 대리 97-3 대광그린상가동 1층109호"
+  },
+  {
+    "number": 6,
+    "name": "대박마트복권방",
+    "total": 5,
+    "auto": 2,
+    "manual": 2,
+    "semiauto": 1,
+    "latlng": "충남 아산시 음봉면 산동리 431-10 태화상가1층103호"
+  },
+  {
+    "number": 7,
+    "name": "대박천하마트",
+    "total": 5,
+    "auto": 4,
+    "manual": 1,
+    "semiauto": 0,
+    "latlng": "인천 부평구 갈산동 367번지"
+  },
+  {
+    "number": 8,
+    "name": "다니엘사2",
+    "total": 5,
+    "auto": 3,
+    "manual": 2,
+    "semiauto": 0,
+    "latlng": "경기 안산시 단원구 초지동 796 101호"
+  },
+  {
+    "number": 9,
+    "name": "대박행진 복권랜드",
+    "total": 5,
+    "auto": 4,
+    "manual": 1,
+    "semiauto": 0,
+    "latlng": "경기 파주시 금촌동 989-1번지 금촌프라자107호"
+  }
+]

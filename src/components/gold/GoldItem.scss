@@ -1,0 +1,95 @@
+#root {
+  .gold {
+    background-color: none;
+
+    .box {
+      position: relative;
+      height: 180px;
+      padding: 15px;
+      background: url(../../images/gold_bg.png) no-repeat center center;
+
+      .table_box {
+        margin-top: 12px;
+        padding: 10px 0;
+        border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        table {
+          th {
+            font-size: 15px;
+            font-weight: normal;
+            text-align: center;
+          }
+          td {
+            padding: 5px 0;
+            font-size: 18px;
+            color: #5a4804;
+
+            span {
+              font-size: 12px;
+
+              &.red {
+                color: #a84a1e;
+              }
+              &.blue {
+                color: #3f67d6;
+              }
+            }
+          }
+          .col {
+            width: 45px;
+          }
+        }
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #734b0d;
+        text-shadow: 0 1px 1px #fff;
+      }
+
+      .ts {
+        margin-top: 10px;
+        padding-left: 2px;
+        font-size: 13px;
+        color: #614a0d;
+      }
+
+      .round {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 36px;
+        height: 36px;
+        margin: 0 0 -18px -18px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 1px 5px #bbb;
+
+        img {
+          width: 45px;
+          height: 45px;
+          margin: -4px 0 0 -4px;
+        }
+      }
+    }
+
+    a {
+      margin-top: -3px;
+      padding: 7px 0 15px;
+      border: 1px solid #ddd;
+      border-top: none;
+
+      &:hover {
+        margin-top: -4px;
+        color: #283252;
+        border: 1px solid #64b0d6;
+
+        .t {
+          color: #088cce;
+        }
+      }
+    }
+  }
+}
