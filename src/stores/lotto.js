@@ -1,14 +1,20 @@
 import { observable, action } from 'mobx';
+import * as api from '../lib/api';
+import roundWeek from '../lib/lottoRound.json'; //로또 회차
 // import lottoAddress from '../lib/lottoAddress.json'; // 로또 엑셀 데이터
 import lotto from '../lib/lotto.json'; //로또 좌표 구한 데이터
 
 export default class ExchangeStore {
-  @observable.ref addressCoordAdd = [];
-  @observable.ref addressAdd = []; //좌표값 얻은 데이터
+  @observable addressCoordAdd = []; //주소 원본 데이터
+  @observable addressAdd = []; //좌표값 얻은 데이터
+  @observable lottoNumber = []; //로또 정보
+  @observable.ref lottoRound = ''; //회차
+  @observable.ref lottoRoundSelect = ''; //선택된 회차
 
   constructor(root) {
     this.root = root;
 
+    this.actLottoNumber();
     // this.actLottoAddressList(); //X, Y 좌표값 구하기
     this.actLottoList(); //좌표값 얻은 데이터
   }
@@ -53,5 +59,26 @@ export default class ExchangeStore {
     } catch (e) {
       console.log(e);
     }
+  };
+
+  @action
+  actLottoNumber = async () => {
+    try {
+      this.lottoRound = roundWeek;
+
+      if (!this.lottoRoundSelect) {
+        this.lottoRoundSelect = this.lottoRound[0];
+      }
+
+      const response = await api.lottoSise(this.lottoRoundSelect);
+      const data = response.data;
+      this.lottoNumber = data;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  @action
+  actRoundSelect = value => {
+    this.lottoRoundSelect = value;
   };
 }

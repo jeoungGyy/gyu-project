@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
-import { Link } from 'react-router-dom';
+
+import LottoNumber from './LottoNumber';
+import LottoMap from './LottoMap';
 import './LottoPage.scss';
 
 @inject('lotto')
 @observer
 class LottoPage extends Component {
-  componentDidMount() {
-    this.setKaKaoMap();
-  }
-
   delayPageLotto = pageName => {
     const {
       history: { push }
@@ -18,82 +16,34 @@ class LottoPage extends Component {
     common.loadingDelay(push, pageName);
   };
 
-  setKaKaoMap = () => {
+  handleRoundSelect = e => {
     const { lotto } = this.props;
-    const { kakao } = window;
-    kakao.maps.load(() => {
-      const mapContainer = document.getElementById('map'); // 지도를 표시할 div
-      const mapOption = {
-        center: new kakao.maps.LatLng(37.51126602153574, 127.04823318422497), // 지도의 중심좌표
-        level: 6 // 지도의 확대 레벨
-      };
-      const map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-      lotto.addressAdd.map(info => {
-        const content =
-          '<div class="bubble"><p class="t">' +
-          info.total +
-          '</p><p class="s">' +
-          info.name +
-          '</p><p class="latlng">' +
-          info.latlng +
-          '</p></div>';
-        if (!info.x) {
-          return false;
-        } else {
-          new kakao.maps.CustomOverlay({
-            map: map,
-            position: new kakao.maps.LatLng(Number(info.y), Number(info.x)),
-            content: content,
-            xAnchor: 0.3,
-            yAnchor: 0.91
-          });
-
-          return false;
-        }
-      });
-
-      kakao.maps.event.addListener(map, 'dragend', function() {
-        bubble();
-      });
-
-      function bubble() {
-        let cols = document.querySelectorAll('.bubble .s');
-
-        Array.from(cols).map(info =>
-          info.addEventListener('mouseenter', bubbleAdd, false)
-        );
-        Array.from(cols).map(info =>
-          info.addEventListener('mouseleave', bubbleRemove, false)
-        );
-      }
-      function bubbleAdd(ev) {
-        ev.path[0].classList.add('act');
-      }
-      function bubbleRemove(ev) {
-        ev.path[0].classList.remove('act');
-      }
-      bubble();
-    });
+    const value = e.target.value;
+    lotto.actRoundSelect(value);
+  };
+  handleRoundSearch = () => {
+    const { lotto } = this.props;
+    lotto.actLottoNumber();
   };
 
   render() {
-    const { delayPageLotto } = this;
+    const { delayPageLotto, handleRoundSelect, handleRoundSearch } = this;
+    const { lotto } = this.props;
+
+    const lottoNumber = lotto.lottoNumber;
 
     return (
       <div className="LottoPage">
-        <div className="App" id="map"></div>
+        <LottoNumber
+          onLottoNumber={lottoNumber}
+          onDelayPageLotto={delayPageLotto}
+          onLottoRound={lotto.lottoRound}
+          onRoundSelect={handleRoundSelect}
+          onRoundSearch={handleRoundSearch}
+        />
+        <LottoMap />
 
-        <div className="home_btn">
-          <Link
-            to={{
-              pathname: ''
-            }}
-            onClick={e => delayPageLotto('', e)}
-          >
-            메인
-          </Link>
-        </div>
+        <div className="home_btn"></div>
       </div>
     );
   }

@@ -53,3 +53,10 @@ export function goldSise(endDay, dayScope) {
     `https://cors-anywhere.herokuapp.com/http://gold.abcb.kr/gold.php?sd=${endDay}&day=${dayScope}`
   );
 }
+
+/* 로또시세 */
+export function lottoSise(round) {
+  return axios.get(
+    `https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${round}`
+  );
+}
