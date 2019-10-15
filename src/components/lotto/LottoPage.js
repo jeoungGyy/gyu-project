@@ -29,6 +29,7 @@ class LottoPage extends Component {
   render() {
     const { delayPageLotto, handleRoundSelect, handleRoundSearch } = this;
     const { lotto } = this.props;
+    const { subLoading } = this.props.lotto.root.common;
 
     const lottoNumber = lotto.lottoNumber;
 
@@ -42,6 +43,12 @@ class LottoPage extends Component {
           onRoundSearch={handleRoundSearch}
         />
         <LottoMap />
+
+        {subLoading && (
+          <div className="spinner_area">
+            <div className="spinner" />
+          </div>
+        )}
 
         <div className="home_btn"></div>
       </div>

@@ -16,7 +16,7 @@ class LottoMap extends Component {
       const mapContainer = document.getElementById('map'); // 지도를 표시할 div
       const mapOption = {
         center: new kakao.maps.LatLng(37.51126602153574, 127.04823318422497), // 지도의 중심좌표
-        level: 6 // 지도의 확대 레벨
+        level: 4 // 지도의 확대 레벨
       };
       const map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다.
 
@@ -49,6 +49,8 @@ class LottoMap extends Component {
 
       kakao.maps.event.addListener(map, 'dragend', function() {
         bubble();
+        let level = map.getLevel();
+        level >= 6 ? markerSimpleMinus() : markerSimplePlus();
       });
       function bubble() {
         let cols = document.querySelectorAll('.bubble .s');
@@ -65,6 +67,22 @@ class LottoMap extends Component {
       }
       function bubbleRemove(ev) {
         ev.path[0].classList.remove('act');
+      }
+
+      kakao.maps.event.addListener(map, 'zoom_changed', function() {
+        let level = map.getLevel();
+
+        level >= 6 ? markerSimpleMinus() : markerSimplePlus();
+      });
+      function markerSimpleMinus() {
+        let cols = document.querySelectorAll('.bubble');
+
+        Array.from(cols).map(info => info.classList.add('simply'));
+      }
+      function markerSimplePlus() {
+        let cols = document.querySelectorAll('.bubble');
+
+        Array.from(cols).map(info => info.classList.remove('simply'));
       }
       bubble();
     });

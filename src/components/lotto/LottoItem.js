@@ -36,7 +36,7 @@ class LottoItem extends Component {
             <div className="line">
               <p className="t">로또 명당</p>
               <p className="u">ReactApp, 동행복권</p>
-              <p className="s">2019</p>
+              <p className="s">2019.09.30</p>
             </div>
           </div>
         </Link>

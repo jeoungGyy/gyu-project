@@ -2,4 +2,39 @@
   position: relative;
   height: 100%;
   padding: 290px 0 0;
+
+  .spinner_area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .spinner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+      margin: -60px 0 0 -20px;
+      background-color: #3396ff;
+      animation: sk-rotateplane 1.6s infinite ease-in-out;
+    }
+    @keyframes sk-rotateplane {
+      0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      }
+      50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      }
+      100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      }
+    }
+  }
 }

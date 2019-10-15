@@ -1,21 +1,21 @@
 import { observable, action } from 'mobx';
 import * as api from '../lib/api';
 import roundWeek from '../lib/lottoRound.json'; //로또 회차
-// import lottoAddress from '../lib/lottoAddress.json'; // 로또 엑셀 데이터
+// import lottoAddress from '../lib/lottoAddress.json'; // 엑셀 데이터
 import lotto from '../lib/lotto.json'; //로또 좌표 구한 데이터
 
 export default class ExchangeStore {
-  @observable addressCoordAdd = []; //주소 원본 데이터
+  @observable addressCoordAdd = []; //엑셀 원본 데이터
   @observable addressAdd = []; //좌표값 얻은 데이터
   @observable lottoNumber = []; //로또 정보
-  @observable.ref lottoRound = ''; //회차
-  @observable.ref lottoRoundSelect = ''; //선택된 회차
+  @observable lottoRound = ''; //회차
+  @observable lottoRoundSelect = ''; //선택된 회차
 
   constructor(root) {
     this.root = root;
 
-    this.actLottoNumber();
-    // this.actLottoAddressList(); //X, Y 좌표값 구하기
+    this.actLottoNumber(); //로또 1위 번호 불러오기
+    // this.actLottoAddressList(); //엑셀 X, Y 좌표값 구하기
     this.actLottoList(); //좌표값 얻은 데이터
   }
 
@@ -37,14 +37,11 @@ export default class ExchangeStore {
   //               selected.y = coorY;
   //               selected.x = coorX;
   //             }
-  //             console.log(result);
   //           } else {
-  //             console.log(i);
-  //             lottoAddress.splice(i);
+  //             // lottoAddress.splice(i);
   //           }
   //         });
   //       });
-  //       console.log(lottoAddress);
   //       this.addressCoordAdd = lottoAddress;
   //     });
   //   } catch (e) {
@@ -55,7 +52,7 @@ export default class ExchangeStore {
   @action
   actLottoList = async () => {
     try {
-      this.addressAdd = lotto;
+      this.addressAdd = await lotto;
     } catch (e) {
       console.log(e);
     }
@@ -68,11 +65,14 @@ export default class ExchangeStore {
 
       if (!this.lottoRoundSelect) {
         this.lottoRoundSelect = this.lottoRound[0];
+      } else {
+        this.root.common.subLoading = true;
       }
 
       const response = await api.lottoSise(this.lottoRoundSelect);
       const data = response.data;
       this.lottoNumber = data;
+      this.root.common.subLoading = false;
     } catch (e) {
       console.log(e);
     }
