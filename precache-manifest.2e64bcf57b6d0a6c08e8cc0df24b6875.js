@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eaa6022ce5ee7fcbf7c7c1a5b6b03dad",
+    "revision": "6348d215bbf730bdf59bfeb3b86d0702",
     "url": "/gyu-project/index.html"
   },
   {
-    "revision": "137c86a7a349f0171f00",
+    "revision": "f318c35b3c5b4b309ff4",
     "url": "/gyu-project/static/css/2.aa07f589.chunk.css"
   },
   {
-    "revision": "aa63c0edbeaa55899a2d",
-    "url": "/gyu-project/static/css/main.2f921da3.chunk.css"
+    "revision": "fca4a841d74dcf9e32f7",
+    "url": "/gyu-project/static/css/main.87c790c5.chunk.css"
   },
   {
-    "revision": "137c86a7a349f0171f00",
-    "url": "/gyu-project/static/js/2.d10d3111.chunk.js"
+    "revision": "f318c35b3c5b4b309ff4",
+    "url": "/gyu-project/static/js/2.e46f4b95.chunk.js"
   },
   {
-    "revision": "aa63c0edbeaa55899a2d",
-    "url": "/gyu-project/static/js/main.04d36df5.chunk.js"
+    "revision": "fca4a841d74dcf9e32f7",
+    "url": "/gyu-project/static/js/main.1274834c.chunk.js"
   },
   {
     "revision": "1829e5258d84f5e2c28d",
@@ -76,6 +76,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gyu-project/static/media/20184889.6a4b83d4.jpg"
   },
   {
+    "revision": "5da197e1c7f6b82961bd83a5895e8e95",
+    "url": "/gyu-project/static/media/20185361.5da197e1.jpg"
+  },
+  {
     "revision": "7d67dc08c36ed2a216d075b6c3b0fe4e",
     "url": "/gyu-project/static/media/20185985.7d67dc08.jpg"
   },
@@ -86,6 +90,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "224c61c67ceb9f3ad66091ae32c75e78",
     "url": "/gyu-project/static/media/20188941.224c61c6.jpg"
+  },
+  {
+    "revision": "925d1675bae7d6d0aecdc6fc3a46a1c0",
+    "url": "/gyu-project/static/media/20191183.925d1675.jpg"
+  },
+  {
+    "revision": "1d5bfca4d7f8f83eb124355f9158c935",
+    "url": "/gyu-project/static/media/20191589.1d5bfca4.jpg"
   },
   {
     "revision": "ef378a3c8dc830f2318ddbd027dc4613",
