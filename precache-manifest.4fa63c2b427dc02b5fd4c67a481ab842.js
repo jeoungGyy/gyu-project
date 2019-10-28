@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6348d215bbf730bdf59bfeb3b86d0702",
+    "revision": "1b43ea30d39dbb45bef2a47cfb92958d",
     "url": "/gyu-project/index.html"
   },
   {
-    "revision": "f318c35b3c5b4b309ff4",
+    "revision": "e4619e60f7ebf8bb906c",
     "url": "/gyu-project/static/css/2.aa07f589.chunk.css"
   },
   {
-    "revision": "fca4a841d74dcf9e32f7",
-    "url": "/gyu-project/static/css/main.87c790c5.chunk.css"
+    "revision": "92bea00d1834f4ff0343",
+    "url": "/gyu-project/static/css/main.f70478cd.chunk.css"
   },
   {
-    "revision": "f318c35b3c5b4b309ff4",
-    "url": "/gyu-project/static/js/2.e46f4b95.chunk.js"
+    "revision": "e4619e60f7ebf8bb906c",
+    "url": "/gyu-project/static/js/2.1f8256d4.chunk.js"
   },
   {
-    "revision": "fca4a841d74dcf9e32f7",
-    "url": "/gyu-project/static/js/main.1274834c.chunk.js"
+    "revision": "92bea00d1834f4ff0343",
+    "url": "/gyu-project/static/js/main.8dee3437.chunk.js"
   },
   {
     "revision": "1829e5258d84f5e2c28d",
@@ -92,6 +92,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gyu-project/static/media/20188941.224c61c6.jpg"
   },
   {
+    "revision": "b8410f1b0bb430afe94ac7aa188c8410",
+    "url": "/gyu-project/static/media/20191029.b8410f1b.jpg"
+  },
+  {
     "revision": "925d1675bae7d6d0aecdc6fc3a46a1c0",
     "url": "/gyu-project/static/media/20191183.925d1675.jpg"
   },
@@ -112,6 +116,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gyu-project/static/media/20195920.d8d34299.jpg"
   },
   {
+    "revision": "02e74d60ffec3da35a67241982797083",
+    "url": "/gyu-project/static/media/20196136.02e74d60.jpg"
+  },
+  {
     "revision": "dd59796d02be15ba09d6b032779f25e8",
     "url": "/gyu-project/static/media/20196309.dd59796d.jpg"
   },
@@ -122,6 +130,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "847a641493f57da7b8643199c74d2065",
     "url": "/gyu-project/static/media/20196850.847a6414.jpg"
+  },
+  {
+    "revision": "216c475eeda4ed32b5682822b0c04e5c",
+    "url": "/gyu-project/static/media/20197054.216c475e.jpg"
   },
   {
     "revision": "4e87046ba982221577373200d9dfeed8",
