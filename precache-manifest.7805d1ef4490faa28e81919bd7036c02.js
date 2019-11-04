@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1719c3d5fba17121e43e6fd4c22ae18c",
+    "revision": "7f44b1eb2bd34a6aee6f9c4ac8c212cf",
     "url": "/gyu-project/index.html"
   },
   {
-    "revision": "e4619e60f7ebf8bb906c",
+    "revision": "330e28278d3dabdc4a7a",
     "url": "/gyu-project/static/css/2.aa07f589.chunk.css"
   },
   {
-    "revision": "664fc55f5a7ab31e823f",
+    "revision": "e7dd0ee5188413fa8589",
     "url": "/gyu-project/static/css/main.f70478cd.chunk.css"
   },
   {
-    "revision": "e4619e60f7ebf8bb906c",
-    "url": "/gyu-project/static/js/2.1f8256d4.chunk.js"
+    "revision": "330e28278d3dabdc4a7a",
+    "url": "/gyu-project/static/js/2.34cc2e88.chunk.js"
   },
   {
-    "revision": "664fc55f5a7ab31e823f",
-    "url": "/gyu-project/static/js/main.8f5ba9e2.chunk.js"
+    "revision": "e7dd0ee5188413fa8589",
+    "url": "/gyu-project/static/js/main.df5513a7.chunk.js"
   },
   {
     "revision": "1829e5258d84f5e2c28d",
@@ -92,6 +92,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gyu-project/static/media/20188941.224c61c6.jpg"
   },
   {
+    "revision": "b0ec56e3d66e0f89a8f6e1afb715b063",
+    "url": "/gyu-project/static/media/20190280.b0ec56e3.jpg"
+  },
+  {
     "revision": "b8410f1b0bb430afe94ac7aa188c8410",
     "url": "/gyu-project/static/media/20191029.b8410f1b.jpg"
   },
@@ -102,6 +106,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1d5bfca4d7f8f83eb124355f9158c935",
     "url": "/gyu-project/static/media/20191589.1d5bfca4.jpg"
+  },
+  {
+    "revision": "93efd44fd9f2f6bc7d6f05adfd99d8ad",
+    "url": "/gyu-project/static/media/20192083.93efd44f.jpg"
+  },
+  {
+    "revision": "06244b4d2ca74a1e1e183a6a72478d77",
+    "url": "/gyu-project/static/media/20192589.06244b4d.jpg"
   },
   {
     "revision": "ef378a3c8dc830f2318ddbd027dc4613",
