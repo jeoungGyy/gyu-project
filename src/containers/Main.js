@@ -14,11 +14,23 @@ import {
 import MovieItem from '../components/movie/MovieItem';
 import GoldItem from '../components/gold/GoldItem';
 import LottoItem from '../components/lotto/LottoItem';
+import ButtonItem from '../components/buttondamoa/ButtonItem';
 import './Main.scss';
 
 @inject('common')
 @observer
 class Main extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    window.onpopstate = () => {
+      let pathname = this.props.history.location.pathname.substring(1);
+      const {
+        history: { push }
+      } = this.props;
+      const { common } = this.props.common.root;
+      common.loadingDelay(push, pathname);
+    };
+  }
+
   render() {
     const masonryOptions = {
       transitionDuration: 200,
@@ -42,6 +54,7 @@ class Main extends Component {
               <MovieItem history={this.props.history} />
               <GoldItem history={this.props.history} />
               <LottoItem history={this.props.history} />
+              <ButtonItem history={this.props.history} />
               <TimeLine />
               <CardHistory />
               <Todo />

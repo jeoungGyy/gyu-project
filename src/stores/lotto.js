@@ -6,10 +6,11 @@ import lotto from '../lib/lotto.json'; //로또 좌표 구한 데이터
 
 export default class ExchangeStore {
   @observable addressCoordAdd = []; //엑셀 원본 데이터
-  @observable addressAdd = []; //좌표값 얻은 데이터
+  @observable.ref addressAdd = []; //좌표값 얻은 데이터
   @observable lottoNumber = []; //로또 정보
   @observable lottoRound = ''; //회차
   @observable lottoRoundSelect = ''; //선택된 회차
+  @observable sliderValue = 2; //슬라이더 값
 
   constructor(root) {
     this.root = root;
@@ -80,5 +81,10 @@ export default class ExchangeStore {
   @action
   actRoundSelect = value => {
     this.lottoRoundSelect = value;
+  };
+
+  @action
+  actSliderValue = value => {
+    this.sliderValue = value;
   };
 }

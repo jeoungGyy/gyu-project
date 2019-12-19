@@ -190,8 +190,8 @@ export default class MovieStore {
       !moreData.length
         ? alert('더 이상 내용이 없습니다.')
         : (this.movieActNameSearch.peopleList = this.movieActNameSearch.peopleList.concat(
-          moreData
-        ));
+            moreData
+          ));
     } else {
       this.moreList++;
 
@@ -207,8 +207,8 @@ export default class MovieStore {
       !moreData.length
         ? alert('더 이상 내용이 없습니다.')
         : (this.movieInSearch.movieList = this.movieInSearch.movieList.concat(
-          moreData
-        ));
+            moreData
+          ));
     }
 
     this.root.common.subLoading = false;

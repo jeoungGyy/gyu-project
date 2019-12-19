@@ -1,0 +1,104 @@
+.LottoStoreList {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  z-index: 1;
+  width: 300px;
+
+  .shop {
+    padding: 8px 0;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+    background-color: #5963d9;
+  }
+
+  .storeArea {
+    border: 1px solid #5963d9;
+    background-color: #fff;
+
+    .rc-slider-handle {
+      border: 2px solid #5963d9;
+    }
+    .rc-slider-track {
+      background-color: #5963d9;
+    }
+
+    .storeList {
+      overflow-y: auto;
+      height: 250px;
+      padding: 0 10px 10px;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #ddd;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #777;
+        border-radius: 3px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #777;
+      }
+      &::-webkit-scrollbar-thumb:active {
+        background: #777;
+      }
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+
+      li {
+        display: flex;
+        margin-top: 8px;
+        padding-top: 8px;
+        font-size: 13px;
+        border-top: 1px solid #ddd;
+
+        &:first-child {
+          margin-top: 0;
+          border-top: none;
+        }
+
+        em {
+          width: 10%;
+          text-align: center;
+        }
+        .store {
+          width: 30%;
+          margin: 0 3px;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .address {
+          width: 60%;
+          line-height: 16px;
+        }
+      }
+    }
+    .listControl {
+      display: flex;
+      padding: 15px 0 15px 15px;
+      text-align: center;
+      border-top: 1px solid #5963d9;
+      background-color: aliceblue;
+
+      .controlBar {
+        width: 60%;
+      }
+      .controlText {
+        width: 40%;
+        font-size: 13px;
+
+        .strong {
+          font-weight: bold;
+          color: #e91e63;
+        }
+      }
+    }
+  }
+}

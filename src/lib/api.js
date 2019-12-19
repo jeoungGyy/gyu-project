@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+const headers = {
+  withCredentials: true
+};
+
 /* 날씨 */
 export function weatherData(year, hours) {
   // console.log(hours);
@@ -18,7 +22,8 @@ export function weatherData(year, hours) {
   }
   // console.log(hours);
   return axios.get(
-    `https://cors-anywhere.herokuapp.com/http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?ServiceKey=${process.env.REACT_APP_WEATHER_SERVICE_KEY}&base_date=${year}&base_time=${hours}00&nx=61&ny=126&_type=json`
+    `https://cors-anywhere.herokuapp.com/http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?ServiceKey=${process.env.REACT_APP_WEATHER_SERVICE_KEY}&base_date=${year}&base_time=${hours}00&nx=61&ny=126&_type=json`,
+    { headers }
   );
 }
 
@@ -50,13 +55,15 @@ export function movieActSearch(actName, moreActList) {
 /* 금시세 */
 export function goldSise(endDay, dayScope) {
   return axios.get(
-    `https://cors-anywhere.herokuapp.com/http://gold.abcb.kr/gold.php?sd=${endDay}&day=${dayScope}`
+    `https://cors-anywhere.herokuapp.com/http://gold.abcb.kr/gold.php?sd=${endDay}&day=${dayScope}`,
+    { headers }
   );
 }
 
 /* 로또시세 */
 export function lottoSise(round) {
   return axios.get(
-    `https://cors-anywhere.herokuapp.com/https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${round}`
+    `https://cors-anywhere.herokuapp.com/https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${round}`,
+    { headers }
   );
 }
