@@ -5,6 +5,7 @@ import ClockStore from './clock';
 import WeatherStore from './weather';
 import Gold from './gold';
 import Lotto from './lotto';
+import Mask from './mask';
 
 class RootStore {
   constructor() {
@@ -15,6 +16,7 @@ class RootStore {
     this.weather = new WeatherStore(this);
     this.gold = new Gold(this);
     this.lotto = new Lotto(this);
+    this.mask = new Mask(this);
   }
 }
 

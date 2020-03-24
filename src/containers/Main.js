@@ -14,7 +14,7 @@ import {
 import MovieItem from '../components/movie/MovieItem';
 import GoldItem from '../components/gold/GoldItem';
 import LottoItem from '../components/lotto/LottoItem';
-import ButtonItem from '../components/buttondamoa/ButtonItem';
+import MaskItem from '../components/mask/MaskItem';
 import './Main.scss';
 
 @inject('common')
@@ -54,7 +54,7 @@ class Main extends Component {
               <MovieItem history={this.props.history} />
               <GoldItem history={this.props.history} />
               <LottoItem history={this.props.history} />
-              <ButtonItem history={this.props.history} />
+              <MaskItem history={this.props.history} />
               <TimeLine />
               <CardHistory />
               <Todo />

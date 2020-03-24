@@ -10,3 +10,4 @@
 - react-clock
 - react-day-picker
 - sass-loader
+- rc-slider

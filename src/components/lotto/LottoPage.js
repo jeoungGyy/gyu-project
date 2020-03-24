@@ -12,6 +12,7 @@ class LottoPage extends Component {
     const {
       history: { push }
     } = this.props;
+    console.log(push);
     const { common } = this.props.lotto.root;
     common.loadingDelay(push, pageName);
   };

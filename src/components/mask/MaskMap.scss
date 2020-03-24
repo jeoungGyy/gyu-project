@@ -1,0 +1,78 @@
+.MaskMap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 250px;
+
+  #map {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #5963d9;
+  }
+  .bubble {
+    position: relative;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
+    // &::after {
+    //   display: block;
+    //   position: absolute;
+    //   left: 50%;
+    //   bottom: -5px;
+    //   content: '';
+    //   width: 0;
+    //   height: 0;
+    //   margin-left: -4px;
+    //   border-right: 8px solid #5963d9;
+    //   border-bottom: 8px solid #5963d9;
+    //   transform: rotate(-45deg);
+    // }
+    &.empty {
+      background-color: #616161;
+
+      .num::after {
+        content: '1개 이하';
+      }
+    }
+    &.few {
+      background-color: #d32f2f;
+
+      .num::after {
+        content: '2~30개 미만';
+      }
+    }
+    &.some {
+      background-color: #ffa000;
+
+      .num::after {
+        content: '30개 이상';
+      }
+    }
+    &.plenty {
+      background-color: #388e3c;
+
+      .num::after {
+        content: '100개 이상';
+      }
+    }
+    &.null {
+      background-color: #616161;
+
+      .num::after {
+        content: '정보없음';
+      }
+    }
+    &.break {
+      background-color: #616161;
+
+      .num::after {
+        content: '판매중지';
+      }
+    }
+    .s {
+      padding: 5px 10px;
+      font-size: 13px;
+      color: #fff;
+    }
+  }
+}

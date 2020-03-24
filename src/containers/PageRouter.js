@@ -4,7 +4,7 @@ import Main from './Main';
 import MoviePage from '../components/movie/MoviePage';
 import GoldPage from '../components/gold/GoldPage';
 import LottoPage from '../components/lotto/LottoPage';
-import ButtonPage from '../components/buttondamoa/ButtonPage';
+import MaskPage from '../components/mask/MaskPage';
 
 class PageRouter extends Component {
   render() {
@@ -14,7 +14,7 @@ class PageRouter extends Component {
         <Route path="/movie" component={MoviePage} />
         <Route path="/gold" component={GoldPage} />
         <Route path="/lotto" component={LottoPage} />
-        <Route path="/button" component={ButtonPage} />
+        <Route path="/mask" component={MaskPage} />
       </Router>
     );
   }

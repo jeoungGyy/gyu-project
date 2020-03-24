@@ -1,0 +1,36 @@
+#root {
+  .mask {
+    .box {
+      position: relative;
+
+      .round {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 36px;
+        height: 36px;
+
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 1px 5px #bbb;
+
+        &.left {
+          margin: 0 0 -17px -41px;
+
+          img {
+            width: 45px;
+            height: 45px;
+            margin: -4px 0 0 -4px;
+          }
+        }
+        &.right {
+          margin: 0 0 -17px 5px;
+
+          img {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
