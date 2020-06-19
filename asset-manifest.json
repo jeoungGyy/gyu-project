@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/gyu-project/static/css/main.bc5b3a03.chunk.css",
-    "main.js": "/gyu-project/static/js/main.0c1961d4.chunk.js",
+    "main.css": "/gyu-project/static/css/main.8926726d.chunk.css",
+    "main.js": "/gyu-project/static/js/main.a6909d3f.chunk.js",
     "runtime~main.js": "/gyu-project/static/js/runtime~main.2a4a6a92.js",
-    "static/css/2.eb3dac2a.chunk.css": "/gyu-project/static/css/2.eb3dac2a.chunk.css",
-    "static/js/2.de935f4b.chunk.js": "/gyu-project/static/js/2.de935f4b.chunk.js",
+    "static/css/2.2b845a22.chunk.css": "/gyu-project/static/css/2.2b845a22.chunk.css",
+    "static/js/2.c225a9fb.chunk.js": "/gyu-project/static/js/2.c225a9fb.chunk.js",
     "index.html": "/gyu-project/index.html",
-    "precache-manifest.68142e18821ca6ceb37ccc415be60946.js": "/gyu-project/precache-manifest.68142e18821ca6ceb37ccc415be60946.js",
+    "precache-manifest.740402540c8cf52178803aa0a7357f1b.js": "/gyu-project/precache-manifest.740402540c8cf52178803aa0a7357f1b.js",
     "service-worker.js": "/gyu-project/service-worker.js",
     "static/media/20175771.jpg": "/gyu-project/static/media/20175771.847f2111.jpg",
     "static/media/20180442.jpg": "/gyu-project/static/media/20180442.ef358f13.jpg",
@@ -72,6 +72,8 @@
     "static/media/project_img5.png": "/gyu-project/static/media/project_img5.4ff5dbeb.png",
     "static/media/project_img6.png": "/gyu-project/static/media/project_img6.6a087c79.png",
     "static/media/project_img7.png": "/gyu-project/static/media/project_img7.162f5929.png",
+    "static/media/project_img8.png": "/gyu-project/static/media/project_img8.e6a79924.png",
+    "static/media/project_img9.png": "/gyu-project/static/media/project_img9.52d2d4d4.png",
     "static/media/react_logo.svg": "/gyu-project/static/media/react_logo.ee7cd8ed.svg"
   }
 }
