@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import ReactSVG from '../../images/react_logo.svg';
-import './MaskItem.scss';
 
-@inject('mask')
+@inject('button')
 @observer
-class MaskItem extends Component {
+class buttonItem extends Component {
   delayPageMask = (pageName) => {
     const {
       history: { push },
     } = this.props;
-    const { common } = this.props.mask.root;
+    const { common } = this.props.button.root;
     common.loadingDelay(push, pageName);
   };
 
@@ -24,26 +23,20 @@ class MaskItem extends Component {
           to={{
             pathname: '',
           }}
-          onClick={() => delayPageMask('mask')}
+          onClick={() => delayPageMask('button')}
         >
           <div className="box">
             <div className="img">
-              <img src={require('../../images/project_img8.png')} alt="" />
-              <div className="round left">
+              <img src={require('../../images/project_img9.png')} alt="" />
+              <div className="round">
                 <img src={ReactSVG} alt="React Logo" />
-              </div>
-              <div className="round right">
-                <img
-                  src={require('../../images/movie_openapi.png')}
-                  alt="Open API"
-                />
               </div>
             </div>
             <div className="summary">
               <div className="line">
-                <p className="t">공적 마스크 재고 확인</p>
-                <p className="u">ReactApp, 공공데이터 Open API</p>
-                <p className="s">2020.03.11</p>
+                <p className="t">CSS/SVG Buttons</p>
+                <p className="u">ReactApp</p>
+                <p className="s">2020.06.16</p>
               </div>
             </div>
           </div>
@@ -53,4 +46,4 @@ class MaskItem extends Component {
   }
 }
 
-export default MaskItem;
+export default buttonItem;

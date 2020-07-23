@@ -79,12 +79,12 @@ export default class ExchangeStore {
     }
   };
   @action
-  actRoundSelect = value => {
+  actRoundSelect = (value) => {
     this.lottoRoundSelect = value;
   };
 
   @action
-  actSliderValue = value => {
+  actSliderValue = (value) => {
     this.sliderValue = value;
   };
 }

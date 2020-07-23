@@ -27,24 +27,24 @@ export default class goldStore {
       this.root.common.loading = true;
 
       const response = await api.goldSise(this.endDay, this.dayScope);
-      const data = response.data.date.map(info => ({
-        date: info
+      const data = response.data.date.map((info) => ({
+        date: info,
       }));
-      const g24k_b = response.data.g24k_b.map(info => ({ g24k_b: info }));
+      const g24k_b = response.data.g24k_b.map((info) => ({ g24k_b: info }));
       const g24k_b_ch = response.data.g24k_b_ch.map((info, index) => ({
         ...data[index],
         ...g24k_b[index],
-        g24k_b_ch: info
+        g24k_b_ch: info,
       }));
 
-      const g24k_s = response.data.g24k_s.map(info => ({ g24k_s: info }));
-      const g18k_s = response.data.g18k_s.map(info => ({ g18k_s: info }));
-      const g14k_s = response.data.g14k_s.map(info => ({ g14k_s: info }));
-      const g24k_s_ch = response.data.g24k_s_ch.map(info => ({
-        g24k_s_ch: info
+      const g24k_s = response.data.g24k_s.map((info) => ({ g24k_s: info }));
+      const g18k_s = response.data.g18k_s.map((info) => ({ g18k_s: info }));
+      const g14k_s = response.data.g14k_s.map((info) => ({ g14k_s: info }));
+      const g24k_s_ch = response.data.g24k_s_ch.map((info) => ({
+        g24k_s_ch: info,
       }));
-      const g18k_s_ch = response.data.g18k_s_ch.map(info => ({
-        g18k_s_ch: info
+      const g18k_s_ch = response.data.g18k_s_ch.map((info) => ({
+        g18k_s_ch: info,
       }));
       const g14k_s_ch = response.data.g14k_s_ch.map((info, index) => ({
         ...data[index],
@@ -53,7 +53,7 @@ export default class goldStore {
         ...g14k_s[index],
         ...g24k_s_ch[index],
         ...g18k_s_ch[index],
-        g14k_s_ch: info
+        g14k_s_ch: info,
       }));
 
       this.goldBuy = g24k_b_ch;
@@ -70,11 +70,8 @@ export default class goldStore {
   };
 
   @action
-  actEndDay = value => {
-    const endDay = value
-      .toISOString()
-      .substr(0, 10)
-      .replace(/-/gi, '');
+  actEndDay = (value) => {
+    const endDay = value.toISOString().substr(0, 10).replace(/-/gi, '');
     const endDayNumber = Number(endDay);
     this.endDay = endDayNumber;
   };
@@ -90,11 +87,11 @@ export default class goldStore {
     this.calculatorToggle = !this.calculatorToggle;
   };
   @action
-  actGoldValue = value => {
+  actGoldValue = (value) => {
     value ? (this.buyGoldValue = parseInt(value)) : (this.buyGoldValue = 0);
   };
   @action
-  actBuyGoldValue = value => {
+  actBuyGoldValue = (value) => {
     this.marginGoldValue = value;
   };
 

@@ -21,7 +21,7 @@ class WeatherItem extends Component {
       '수요일(WED)',
       '목요일(THU)',
       '금요일(FRI)',
-      '토요일(SAT)'
+      '토요일(SAT)',
     ];
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
@@ -81,7 +81,7 @@ class WeatherItem extends Component {
             <div className="right">
               <p className="img">
                 {(() => {
-                  if (date.getHours() < 20 || date.getHours() > 6) {
+                  if (date.getHours() < 20 && date.getHours() > 6) {
                     return (
                       <img
                         src={require('../../images/icon_sunny.png')}

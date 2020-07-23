@@ -14,7 +14,7 @@ class MaskMap extends Component {
     this.setKaKaoMap();
   }
 
-  handleInputChoice = e => {
+  handleInputChoice = (e) => {
     const { mask } = this.props;
     let value = e.target.value;
     mask.actInputChoice(value);
@@ -31,7 +31,7 @@ class MaskMap extends Component {
     var geocoder = new kakao.maps.services.Geocoder();
 
     // 주소로 좌표를 검색합니다
-    geocoder.addressSearch(mask.inputChoice, function(result, status) {
+    geocoder.addressSearch(mask.inputChoice, function (result, status) {
       // 정상적으로 검색이 완료됐으면
       if (status === kakao.maps.services.Status.OK) {
         var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
@@ -43,7 +43,7 @@ class MaskMap extends Component {
       }
     });
   };
-  handleSelectPress = e => {
+  handleSelectPress = (e) => {
     if (e.key === 'Enter') {
       this.handleSelectChoice();
     }
@@ -58,7 +58,7 @@ class MaskMap extends Component {
 
       const mapOption = {
         center: new kakao.maps.LatLng(37.51126602153574, 127.04823318422497), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
+        level: 3, // 지도의 확대 레벨
       };
 
       map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다.
@@ -68,12 +68,12 @@ class MaskMap extends Component {
 
       mapMarker();
 
-      kakao.maps.event.addListener(map, 'idle', function() {
+      kakao.maps.event.addListener(map, 'idle', function () {
         // 지도의 중심좌표를 얻어옵니다
         var latlng = map.getCenter();
         mask.actAddrChange(latlng.Ha, latlng.Ga);
 
-        markers.map(info => info.setMap(null));
+        markers.map((info) => info.setMap(null));
 
         mapMarker();
       });
@@ -81,7 +81,7 @@ class MaskMap extends Component {
       function mapMarker() {
         let foo = setInterval(() => {
           if (mask.maskList.length) {
-            mask.maskList.map(info => {
+            mask.maskList.map((info) => {
               const content =
                 '<div class="bubble ' +
                 info.remain_stat +
@@ -95,7 +95,7 @@ class MaskMap extends Component {
                   Number(info.lat),
                   Number(info.lng)
                 ),
-                content: content
+                content: content,
               });
               overlay.setMap(map);
               markers.push(overlay);

@@ -5,6 +5,10 @@ const MaskSearch = ({ onSelectChoice, onInputChoice, onSelectPress }) => {
   return (
     <div className="MaskSearch">
       <h2>공적마스크 재고 확인</h2>
+      <p className="h2t">
+        (API가 중지됐습니다. 현재 내용은 7월 12일 마지막 데이터입니다. 이벤트
+        발생 시 에러 납니다.)
+      </p>
 
       <div className="search">
         <input

@@ -2,20 +2,17 @@ import { observable, action } from 'mobx';
 import * as api from '../lib/api';
 
 export default class weather {
-  @observable selectedItems = [];
+  @observable.ref selectedItems = [];
 
   constructor(root) {
     this.root = root;
-    // this.weatherList();
+    this.weatherList();
   }
 
   @action
   weatherList = async () => {
     const { date } = this.root.clock;
-    const dateMMMM = date
-      .toISOString()
-      .substr(0, 10)
-      .replace(/-/gi, '');
+    const dateMMMM = date.toISOString().substr(0, 10).replace(/-/gi, '');
     const dateHH = date.getHours();
 
     try {

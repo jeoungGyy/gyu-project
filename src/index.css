@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 
 html,
 body,
@@ -102,7 +102,7 @@ html {
 }
 body {
   height: 100%;
-  font-family: "Spoqa Han Sans", "Sans-serif";
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
   font-size: 14px;
   color: #000;
   line-height: 1;
@@ -125,7 +125,7 @@ a:visited {
 }
 
 select {
-  font-family: "Hankyoreh", "Sans-serif";
+  font-family: 'Hankyoreh', 'Sans-serif';
   font-size: 100%;
   vertical-align: middle;
   background-color: #fff;
@@ -137,28 +137,28 @@ select.invalidate {
   background-color: #fff1f1;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   border: 0;
   cursor: pointer;
 }
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   width: 14px;
   height: 14px;
   margin-top: -2px;
   vertical-align: middle;
 }
-input[type="file"],
-input[type="text"],
-input[type="password"] {
+input[type='file'],
+input[type='text'],
+input[type='password'] {
   padding-left: 3px;
   font-size: 100%;
   vertical-align: middle;
   border: 1px solid #aaa;
   background-color: #fff;
 }
-input[type="text"]:focus,
-input[type="password"]:focus {
+input[type='text']:focus,
+input[type='password']:focus {
   background-color: #ecf9ff;
 }
 input[readonly],
@@ -167,7 +167,7 @@ input[disabled] {
 }
 
 button {
-  font-family: "Hankyoreh", "Sans-serif";
+  font-family: 'Hankyoreh', 'Sans-serif';
   border: 0 none;
   padding: 0;
   margin: 0;
@@ -233,7 +233,7 @@ legend {
   clear: both;
   visibility: hidden;
   height: 0;
-  content: ".";
+  content: '.';
 }
 * html .clearfix {
   height: 1%;

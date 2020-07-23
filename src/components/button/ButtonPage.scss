@@ -1,0 +1,25 @@
+.ButtonPage {
+  padding: 40px 20px 20px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+  }
+  h3 {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+
+    li {
+      margin: 10px;
+    }
+  }
+}

@@ -7,14 +7,15 @@ import {
   FreeFonts,
   TimeLine,
   CardHistory,
-  Todo,
   PublishV2,
-  PublishV1
+  PublishV1,
 } from '../components/linkpage';
 import MovieItem from '../components/movie/MovieItem';
 import GoldItem from '../components/gold/GoldItem';
 import LottoItem from '../components/lotto/LottoItem';
 import MaskItem from '../components/mask/MaskItem';
+import ButtonItem from '../components/button/ButtonItem';
+import TodoItem from '../components/todo/TodoItem';
 import './Main.scss';
 
 @inject('common')
@@ -24,7 +25,7 @@ class Main extends Component {
     window.onpopstate = () => {
       let pathname = this.props.history.location.pathname.substring(1);
       const {
-        history: { push }
+        history: { push },
       } = this.props;
       const { common } = this.props.common.root;
       common.loadingDelay(push, pathname);
@@ -36,7 +37,7 @@ class Main extends Component {
       transitionDuration: 200,
       columnWidth: 250,
       gutter: 10,
-      initLayout: false
+      initLayout: false,
     };
 
     return (
@@ -51,13 +52,14 @@ class Main extends Component {
             >
               <WeatherItem />
               <FreeFonts />
+              <TodoItem history={this.props.history} />
               <MovieItem history={this.props.history} />
               <GoldItem history={this.props.history} />
+              <ButtonItem history={this.props.history} />
               <LottoItem history={this.props.history} />
               <MaskItem history={this.props.history} />
               <TimeLine />
               <CardHistory />
-              <Todo />
               <PublishV2 />
               <PublishV1 />
             </Masonry>

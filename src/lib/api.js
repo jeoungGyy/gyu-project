@@ -1,28 +1,27 @@
 import axios from 'axios';
 
 const headers = {
-  withCredentials: true
+  withCredentials: true,
 };
 
 /* 날씨 */
 export function weatherData(year, hours) {
   // console.log(hours);
-  if (hours >= 11 && hours < 14) {
-    hours = '11';
-  } else if (hours >= 14 && hours < 17) {
-    hours = '14';
-  } else if (hours >= 17 && hours < 20) {
-    hours = '17';
-  } else if (hours >= 20 && hours < 23) {
-    hours = '20';
-  } else if (hours >= 23 && hours < 24) {
-    hours = '20';
-  } else {
-    hours = '08';
-  }
-  // console.log(hours);
+  // if (hours >= 11 && hours < 14) {
+  //   hours = '11';
+  // } else if (hours >= 14 && hours < 17) {
+  //   hours = '14';
+  // } else if (hours >= 17 && hours < 20) {
+  //   hours = '17';
+  // } else if (hours >= 20 && hours < 23) {
+  //   hours = '20';
+  // } else if (hours >= 23 && hours < 24) {
+  //   hours = '20';
+  // } else {
+  //   hours = '08';
+  // }
   return axios.get(
-    `https://cors-anywhere.herokuapp.com/http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?ServiceKey=${process.env.REACT_APP_WEATHER_SERVICE_KEY}&base_date=${year}&base_time=${hours}00&nx=61&ny=126&_type=json`,
+    `https://cors-anywhere.herokuapp.com/http://apis.data.go.kr/1360000/VilageFcstInfoService/getVilageFcst?serviceKey=${process.env.REACT_APP_WEATHER_SERVICE_KEY}&numOfRows=10&pageNo=1&base_date=${year}&base_time=${hours}00&nx=61&ny=126&dataType=JSON`,
     { headers }
   );
 }
@@ -68,9 +67,9 @@ export function lottoSise(round) {
   );
 }
 
-/* 마스크 재고 수량 */
+/* 마스크 재고 수량(사용 안함) 
 export function maskNumber(Ha, Ga) {
   return axios.get(
     `https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat=${Ha}&lng=${Ga}`
   );
-}
+}*/
