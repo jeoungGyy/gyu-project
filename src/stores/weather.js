@@ -6,14 +6,14 @@ export default class weather {
 
   constructor(root) {
     this.root = root;
-    this.weatherList();
+    // this.weatherList();
   }
 
   @action
   weatherList = async () => {
     const { date } = this.root.clock;
     const dateMMMM = date.toISOString().substr(0, 10).replace(/-/gi, '');
-    const dateHH = date.getHours();
+    const dateHH = String(date.getHours());
 
     try {
       const response = await api.weatherData(dateMMMM, dateHH);

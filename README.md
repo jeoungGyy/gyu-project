@@ -4,7 +4,9 @@
 
 - mobx
 - mobx-react
-- react-highcharts
+- react-highcharts(이건 추후 제거할 예정)
+- highcharts
+- highcharts-react-official
 - react-icons-kit
 - react-masonry-component
 - react-clock

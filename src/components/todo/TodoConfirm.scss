@@ -1,0 +1,27 @@
+$controls-box-line: #717e8a;
+
+#root {
+  .TodoConfirm {
+    width: 30%;
+
+    h3 {
+      margin-top: 7px;
+      font-size: 26px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .list {
+      margin-top: 21px;
+
+      > li {
+        padding-left: 0;
+
+        .con {
+          border: 1px solid $controls-box-line;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}

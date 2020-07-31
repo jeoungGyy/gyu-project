@@ -34,7 +34,7 @@ class TodoItem extends Component {
             </div>
             <div className="summary">
               <div className="line">
-                <p className="t">내가쓰는 Todo</p>
+                <p className="t">나만의 Todo</p>
                 <p className="u">ReactApp</p>
                 <p className="s">2018.12.06</p>
               </div>

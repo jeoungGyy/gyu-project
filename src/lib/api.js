@@ -2,6 +2,8 @@ import axios from 'axios';
 
 const headers = {
   withCredentials: true,
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*',
 };
 
 /* 날씨 */
@@ -32,19 +34,16 @@ export function movieData(repData, date) {
     `https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${process.env.REACT_APP_MOVIE_SERVICE_KEY}&targetDt=${date}&repNationCd=${repData}`
   );
 }
-
 export function movieWeekendData(repData, date) {
   return axios.get(
     `https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=${process.env.REACT_APP_MOVIE_SERVICE_KEY}&targetDt=${date}&repNationCd=${repData}`
   );
 }
-
 export function movieSearch(selectChoice, inputChoice, moreList) {
   return axios.get(
     `https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=${process.env.REACT_APP_MOVIE_SERVICE_KEY}&${selectChoice}=${inputChoice}&curPage=${moreList}`
   );
 }
-
 export function movieActSearch(actName, moreActList) {
   return axios.get(
     `https://www.kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleList.json?key=${process.env.REACT_APP_MOVIE_SERVICE_KEY}&peopleNm=${actName}&curPage=${moreActList}`
@@ -73,3 +72,22 @@ export function maskNumber(Ha, Ga) {
     `https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat=${Ha}&lng=${Ga}`
   );
 }*/
+
+/* Todo 읽기 */
+export function todoList() {
+  return axios.get('/api/todos', { headers });
+}
+/* Todo 쓰기 */
+export function todoWrite(writeDdata) {
+  return axios.post('/api/todos', writeDdata, { headers });
+}
+/* Todo 삭제 */
+export function todoDelete(id) {
+  return axios.delete(`/api/todos/${id}`, { headers });
+}
+/* Todo 수정 */
+export function todoPatch(id, patchDdata) {
+  // console.log(id);
+  // console.log(patchDdata);
+  return axios.patch(`/api/todos/${id}`, patchDdata, { headers });
+}

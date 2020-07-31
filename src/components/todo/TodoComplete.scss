@@ -1,0 +1,171 @@
+$todo-defalt-color: #323b44;
+$graph-font-color: #ced4da !important;
+$todo-search-color: #2f7d81;
+$todo-button-color: #515a63;
+$todo-active-color: #2f7d81;
+$cahat-background-color: #36404a;
+
+#root {
+  .TodoComplete {
+    width: 30%;
+    padding: 80px 10px 40px;
+    background-color: $todo-defalt-color;
+
+    h3 {
+      margin-top: 7px;
+      font-size: 26px;
+      font-weight: 400;
+      color: #ced4da;
+      text-align: center;
+    }
+
+    .tab {
+      clear: both;
+      overflow: hidden;
+      margin-top: 21px;
+      border-radius: 4px;
+
+      button {
+        height: 30px;
+        color: $graph-font-color;
+        background-color: $todo-button-color;
+
+        &.graph {
+          float: left;
+          width: 50%;
+        }
+        &.list {
+          float: right;
+          width: 50%;
+        }
+        &.active {
+          color: #ced4da;
+          background-color: $todo-active-color;
+        }
+      }
+    }
+
+    .variablepie_chart {
+      margin-top: 12px;
+      background-color: $cahat-background-color;
+    }
+    .column_chart {
+      margin-top: 12px;
+      background-color: $cahat-background-color;
+    }
+
+    svg {
+      .highcharts-title {
+        tspan {
+          fill: $graph-font-color;
+        }
+      }
+      .highcharts-data-label {
+        text {
+          font-weight: normal !important;
+          color: $graph-font-color;
+          fill: $graph-font-color;
+
+          tspan {
+            fill: $graph-font-color;
+            stroke-width: 0;
+          }
+        }
+      }
+      .highcharts-axis-labels {
+        text {
+          color: $graph-font-color;
+          fill: $graph-font-color;
+        }
+      }
+
+      g {
+        rect {
+          stroke: #5c646d;
+        }
+        path {
+          stroke: #434e58;
+        }
+      }
+    }
+
+    .none {
+      display: none;
+    }
+
+    .search_input {
+      position: relative;
+      margin-top: 18px;
+
+      input {
+        width: 100%;
+        height: 40px;
+        padding: 0 40px 0 10px;
+        font-size: 18px;
+        color: $todo-search-color;
+        border: 2px solid $todo-search-color;
+        border-radius: 4px;
+      }
+      button {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        background-color: $todo-search-color;
+        border-radius: 0 4px 4px 0;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .tag {
+      clear: left;
+      overflow: hidden;
+      margin-top: 6px;
+
+      li {
+        float: left;
+        margin-left: 5px;
+
+        button {
+          display: inline-block;
+          padding: 0 8px 1px;
+          font-size: 13px;
+          color: $graph-font-color;
+          background-color: $todo-button-color;
+          border-radius: 10px;
+
+          &.active {
+            color: #fff;
+            background-color: $todo-active-color;
+          }
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .list {
+      > li {
+        .import {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-top: 0;
+          border: 1px solid #000;
+          background-color: #f3f6f9;
+        }
+        .con {
+          border: 1px solid #000;
+          border-left: none;
+        }
+      }
+    }
+  }
+}

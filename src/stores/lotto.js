@@ -15,9 +15,9 @@ export default class ExchangeStore {
   constructor(root) {
     this.root = root;
 
-    this.actLottoNumber(); //로또 1위 번호 불러오기
+    // this.actLottoNumber(); //로또 1위 번호 불러오기
     // this.actLottoAddressList(); //엑셀 X, Y 좌표값 구하기
-    this.actLottoList(); //좌표값 얻은 데이터
+    // this.actLottoList(); //좌표값 얻은 데이터
   }
 
   // @action

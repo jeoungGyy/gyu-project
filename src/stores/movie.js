@@ -4,17 +4,17 @@ import imageData from '../lib/movieImages.json';
 
 export default class MovieStore {
   @observable.ref movieDaily = {
-    dailyBoxOfficeList: []
+    dailyBoxOfficeList: [],
   };
   @observable movieWeekly = {
-    weeklyBoxOfficeList: []
+    weeklyBoxOfficeList: [],
   };
   @observable movieInSearch = {
     inputChoiceClone: '',
-    movieList: []
+    movieList: [],
   };
   @observable movieActNameSearch = {
-    peopleList: []
+    peopleList: [],
   };
 
   @observable layer = false; // 레이어 팝업 On/Off
@@ -37,11 +37,11 @@ export default class MovieStore {
   constructor(root) {
     this.root = root;
 
-    this.actMovieList();
+    // this.actMovieList();
   }
 
   @action
-  actMovieList = async repData => {
+  actMovieList = async (repData) => {
     try {
       this.root.common.loading = true;
 
@@ -52,10 +52,7 @@ export default class MovieStore {
       if (!this.day) {
         const { date } = this.root.clock;
 
-        const dateMMMM = date
-          .toISOString()
-          .substr(0, 10)
-          .replace(/-/gi, '');
+        const dateMMMM = date.toISOString().substr(0, 10).replace(/-/gi, '');
         const dateMinus = String(Number(dateMMMM) - 1);
         this.day = dateMinus;
       }
@@ -70,7 +67,7 @@ export default class MovieStore {
 
         imageData.map((currElement, i) => {
           let index = data.dailyBoxOfficeList.findIndex(
-            infomation => infomation.movieCd === currElement.id
+            (infomation) => infomation.movieCd === currElement.id
           );
           let selected = data.dailyBoxOfficeList[index];
           if (!selected) {
@@ -88,7 +85,7 @@ export default class MovieStore {
 
         imageData.map((currElement, i) => {
           let index = data.weeklyBoxOfficeList.findIndex(
-            infomation => infomation.movieCd === currElement.id
+            (infomation) => infomation.movieCd === currElement.id
           );
           let selected = data.weeklyBoxOfficeList[index];
           if (!selected) {
@@ -112,17 +109,14 @@ export default class MovieStore {
     }
   };
   @action
-  actDayChange = daySelect => {
-    const dateMMMM = daySelect
-      .toISOString()
-      .substr(0, 10)
-      .replace(/-/gi, '');
+  actDayChange = (daySelect) => {
+    const dateMMMM = daySelect.toISOString().substr(0, 10).replace(/-/gi, '');
     const dateMinus = String(dateMMMM);
     this.day = dateMinus;
     this.actMovieList();
   };
   @action
-  actDayLayerToggle = value => {
+  actDayLayerToggle = (value) => {
     this.layer = !this.layer;
     this.dayText = value;
   };
@@ -169,11 +163,11 @@ export default class MovieStore {
     this.root.common.loading = false;
   };
   @action
-  actSelectChoice = value => {
+  actSelectChoice = (value) => {
     this.selectChoice = value;
   };
   @action
-  actInputChoice = value => {
+  actInputChoice = (value) => {
     this.inputChoice = value;
   };
   @action
