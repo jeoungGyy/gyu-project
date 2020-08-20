@@ -4,23 +4,7 @@ import variablePie from 'highcharts/modules/variable-pie.js';
 import HighchartsReact from 'highcharts-react-official';
 
 const TodoCompletePagePie = (tagChoice) => {
-  // const aa = tagChoice.tagChoice.map((info) => {
-  //   return (info = { name: info, y: 10, z: 30 });
-  // });
-  const aa = [
-    {
-      name: '플팩',
-      y: 10,
-      z: 30,
-    },
-    {
-      name: '오아시스',
-      y: 3,
-      z: 10,
-    },
-  ];
-  // console.log(aa);
-  // console.log(tagChoice.tagChoice);
+  if (!tagChoice.tagChoice.length) return false;
 
   variablePie(Highcharts);
 
@@ -50,25 +34,17 @@ const TodoCompletePagePie = (tagChoice) => {
       enabled: false,
     },
     tooltip: {
-      shared: true,
+      headerFormat: '',
+      pointFormat:
+        '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
+        '건수 (square km): <b>{point.y}</b><br/>',
     },
     series: [
       {
         minPointSize: 10,
         innerSize: '20%',
         zMin: 0,
-        data: [
-          {
-            name: '플팩',
-            y: 10,
-            z: 30,
-          },
-          {
-            name: '오아시스',
-            y: 3,
-            z: 10,
-          },
-        ],
+        data: tagChoice.tagChoice,
       },
     ],
   };

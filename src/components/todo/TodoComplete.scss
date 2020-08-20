@@ -4,6 +4,7 @@ $todo-search-color: #2f7d81;
 $todo-button-color: #515a63;
 $todo-active-color: #2f7d81;
 $cahat-background-color: #36404a;
+$todo-default-color: #717e8a;
 
 #root {
   .TodoComplete {
@@ -28,13 +29,13 @@ $cahat-background-color: #36404a;
       button {
         height: 30px;
         color: $graph-font-color;
-        background-color: $todo-button-color;
+        background-color: #44515f;
 
-        &.graph {
+        &.btnGraph {
           float: left;
           width: 50%;
         }
-        &.list {
+        &.btnList {
           float: right;
           width: 50%;
         }
@@ -153,6 +154,8 @@ $cahat-background-color: #36404a;
 
     .list {
       > li {
+        background-color: #3e4a56;
+
         .import {
           display: flex;
           align-items: center;
@@ -162,8 +165,53 @@ $cahat-background-color: #36404a;
           background-color: #f3f6f9;
         }
         .con {
-          border: 1px solid #000;
+          border: none;
           border-left: none;
+
+          .title {
+            color: #97a2ad;
+          }
+        }
+        .option {
+          svg {
+            color: #97a2ad;
+          }
+        }
+
+        .panel {
+          right: 38px;
+
+          &::after {
+            right: -5px;
+            transform: rotate(225deg);
+          }
+        }
+
+        .compleateDate {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 60px;
+          height: 100%;
+          color: #97a2ad;
+          text-align: center;
+          background-color: #44515f;
+          border-radius: 3px 0 0 3px;
+
+          .items {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -16px 0 0 -21px;
+
+            .y {
+              font-size: 12px;
+            }
+            .md {
+              margin-top: 2px;
+              font-size: 15px;
+            }
+          }
         }
       }
     }

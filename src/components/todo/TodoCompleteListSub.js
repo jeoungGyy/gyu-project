@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Icon } from 'react-icons-kit';
 import { ic_more_vert } from 'react-icons-kit/md';
-import TodoTodoListSub from './TodoTodoListSub';
 
 @inject('todo')
 @observer
-class TodoConfirmList extends Component {
+class TodoCompleteListSub extends Component {
   state = {
     toggle: false,
-    commentToggle: false,
   };
 
   // State
@@ -21,14 +19,6 @@ class TodoConfirmList extends Component {
   };
 
   // Handle
-  // 삭제
-  handleTodoDelete = () => {
-    const { todo, info } = this.props;
-    this.setState({
-      toggle: false,
-    });
-    todo.actTodoDelete(info._id);
-  };
   // '할일'목록으로 넘기기
   handleTodo = () => {
     const { todo, info } = this.props;
@@ -37,34 +27,17 @@ class TodoConfirmList extends Component {
     });
     todo.actTodo(info._id);
   };
-  // '완료'목록으로 넘기기
-  handleComplete = () => {
+  // '확인'목록으로 넘기기
+  handleConfirm = () => {
     const { todo, info } = this.props;
     this.setState({
       toggle: false,
     });
-    todo.actComplete(info._id);
-  };
-  // 코멘트 리스트 삭제
-  handleSubListPatch = (subId) => {
-    const { todo, info } = this.props;
-    todo.actSubListPatch(info._id, subId);
-  };
-  // 코멘트 리스트 수정
-  handleCommentPatch = (value, subId) => {
-    const { todo, info } = this.props;
-    todo.actCommentPatch(value, info._id, subId);
+    todo.actConfirm(info._id);
   };
 
   render() {
-    const {
-      stateToggle,
-      handleTodo,
-      handleComplete,
-      handleTodoDelete,
-      handleSubListPatch,
-      handleCommentPatch,
-    } = this;
+    const { stateToggle, handleConfirm, handleTodo } = this;
     const { info } = this.props;
     const { toggle } = this.state;
 
@@ -72,19 +45,24 @@ class TodoConfirmList extends Component {
       .toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })
       .substring(0, 10);
 
-    const subComments = info.comments.map((sinfo, index) => {
-      return (
-        <TodoTodoListSub
-          key={index}
-          sinfo={sinfo}
-          onSubListPatch={handleSubListPatch}
-          onCommentPatch={handleCommentPatch}
-        />
-      );
-    });
+    const subComments = info.comments.map((info, index) => (
+      <li key={index}>
+        <p>{info.comment}</p>
+      </li>
+    ));
+
+    const year = info.completeDate.substring(0, 4);
+    const month = info.completeDate.substring(5, 10);
 
     return (
       <li>
+        <div className="compleateDate">
+          <div className="items">
+            <p className="y">{year}</p>
+            <p className="md">{month}</p>
+          </div>
+        </div>
+
         <div className="con">
           <p className="title">
             [{info.tags}] {info.subject}
@@ -106,13 +84,8 @@ class TodoConfirmList extends Component {
               </button>
             </li>
             <li>
-              <button type="button" onClick={handleComplete}>
-                완료
-              </button>
-            </li>
-            <li>
-              <button type="button" onClick={handleTodoDelete}>
-                삭제
+              <button type="button" onClick={handleConfirm}>
+                확인
               </button>
             </li>
           </ul>
@@ -122,4 +95,4 @@ class TodoConfirmList extends Component {
   }
 }
 
-export default TodoConfirmList;
+export default TodoCompleteListSub;

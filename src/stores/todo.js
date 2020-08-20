@@ -4,6 +4,7 @@ import * as api from '../lib/api';
 export default class PostStore {
   @observable.ref todoList = [];
   @observable.ref tagList = []; //Tga 셀렉트에 담을때 사용
+  @observable.ref tagName = '전체'; // 완료 Hash 태그 선택
 
   constructor(root) {
     this.root = root;
@@ -36,6 +37,7 @@ export default class PostStore {
 
       this.todoList = data;
       this.tagList = tagChoice;
+      console.log('읽기 완료!');
     } catch (e) {
       console.log('Error: 읽기에 실패했습니다.');
     }
@@ -187,12 +189,19 @@ export default class PostStore {
     list.btnTodo = false;
     list.btnConfirm = false;
     list.btnComplete = true;
+    list.completeDate = Date.now();
 
     try {
       await api.todoPatch(id, list).then(this.actTodoList());
     } catch (e) {
       console.log('Error: 완료 목록 수정에 실패했습니다.');
     }
+  };
+
+  // 완료 Hash 태그 선택
+  @action
+  actTagName = (value) => {
+    this.tagName = value;
   };
 
   // 할일 콘트롤 창 열기 - 안씀

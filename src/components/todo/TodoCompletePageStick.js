@@ -2,7 +2,7 @@ import React from 'react';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-const TodoCompletePageStick = () => {
+const TodoCompletePageStick = ({ valueTagChoice, valueYZ }) => {
   const options = {
     colors: ['#3bafda'],
     chart: {
@@ -27,19 +27,11 @@ const TodoCompletePageStick = () => {
       title: false,
     },
     xAxis: {
-      categories: [
-        '플팩',
-        '오아시스',
-        '하이스트',
-        '피기맘',
-        '프리키즈',
-        '피그마',
-        'T-box',
-      ],
+      categories: valueTagChoice,
     },
     series: [
       {
-        data: [29.9, 71.5, 144.0, 176.0, 135.6, 95.6, 54.4],
+        data: valueYZ,
         showInLegend: false,
       },
     ],

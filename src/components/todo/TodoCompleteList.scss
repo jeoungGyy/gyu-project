@@ -1,0 +1,26 @@
+.TodoCompleteList {
+  .hash {
+    clear: left;
+    overflow: hidden;
+    margin: 10px 0 0 -5px;
+
+    li {
+      float: left;
+      margin-left: 5px;
+
+      button {
+        display: inline-block;
+        margin: 3px 0;
+        padding: 1px 5px 2px;
+        color: #9e9e9e;
+        background-color: #44515f;
+        border-radius: 11px;
+
+        &.active {
+          color: #333;
+          background-color: #f672a7;
+        }
+      }
+    }
+  }
+}

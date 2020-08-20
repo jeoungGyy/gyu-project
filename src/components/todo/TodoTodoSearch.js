@@ -36,6 +36,8 @@ class TodoTodoSearch extends Component {
     const { onTodoWrite, tagList } = this.props;
     const { inputValue, tagValue } = this.state;
 
+    if (!tagList.length) return false;
+
     const tags = tagList.map((info, index) => {
       return <option key={index}>{info}</option>;
     });

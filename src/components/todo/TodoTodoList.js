@@ -151,7 +151,7 @@ class TodoTodoList extends Component {
               </div>
             </div>
           )}
-          <ul className="sublist">{sublist}</ul>
+          {!sublist.length === false && <ul className="sublist">{sublist}</ul>}
           <p className="date">{dateString}</p>
         </div>
 

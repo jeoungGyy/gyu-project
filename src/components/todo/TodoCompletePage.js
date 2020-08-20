@@ -8,31 +8,26 @@ import TodoCompletePageStick from './TodoCompletePageStick';
 class TodoCompletePage extends Component {
   render() {
     const { todo } = this.props;
+    if (!todo.tagList.length) return false;
 
     const complete = todo.todoList.filter((complete) => complete.btnComplete);
     const tag = complete.map((info) => info.tags);
-    let tagChoice = tag
-      .reduce(function (a, b) {
-        if (a.indexOf(b) < 0) a.push(b);
-        return a;
-      }, [])
-      .sort();
+    const tagChoice = Array.from(new Set(tag)).sort();
+    const yz = tagChoice.map(
+      (tagName) =>
+        complete
+          .map((allList) => allList.tags === tagName)
+          .filter((tags) => tags).length
+    );
 
-    // const test = complete.map(
-    //   (info) => info.filter((tag) => tag.tags === todo.tagList).length
-    //   // (info) => console.log(info)
-    // );
-
-    const aa = tagChoice.map((info) => {
-      return (info = { name: info, y: 10, z: 30 });
+    const variablepie = tagChoice.map((info, index) => {
+      return (info = { name: info, y: yz[index], z: (yz[index] * 10) / 2 });
     });
-
-    // console.log(tagChoice);
 
     return (
       <div>
-        <TodoCompletePagePie tagChoice={aa} />
-        <TodoCompletePageStick />
+        <TodoCompletePagePie tagChoice={variablepie} />
+        <TodoCompletePageStick valueTagChoice={tagChoice} valueYZ={yz} />
       </div>
     );
   }

@@ -19,6 +19,8 @@ class TodoTodo extends Component {
     const { todo } = this.props;
     const { subLoading } = this.props.todo.root.common;
 
+    if (!todo.todoList.length) return false;
+
     const defaultList = todo.todoList.filter((todo) => todo.btnTodo);
     const todoList = defaultList.map((info, index) => {
       return <TodoTodoList info={info} key={index} />;
@@ -29,6 +31,9 @@ class TodoTodo extends Component {
         <h2>할 일</h2>
         <TodoTodoSearch onTodoWrite={handleTodoWrite} tagList={todo.tagList} />
 
+        {!todoList.length && (
+          <div className="empty">등록 된 내용이 없습니다.</div>
+        )}
         <ul className="list">{todoList}</ul>
 
         {subLoading && (
