@@ -14,7 +14,7 @@ $todo-bg-color: #0a0c0e;
     top: 0;
     width: 100%;
     height: 35px;
-    padding: 7px 20px;
+    padding: 7px 10px;
     background-color: $todo-bg-color;
 
     .gheader {
@@ -62,11 +62,9 @@ $todo-bg-color: #0a0c0e;
     .hcontrol {
       float: right;
 
-      button {
+      a {
         display: inline-block;
-        width: 70px;
-        height: 20px;
-        margin-left: 5px;
+        padding: 4px 25px;
         color: #8a929a;
         background-color: #515a63;
         border-radius: 2px;
@@ -76,11 +74,11 @@ $todo-bg-color: #0a0c0e;
 
   .pages {
     display: flex;
-    height: 100%;
+    min-height: 100%;
 
     > div {
-      height: 100%;
-      padding: 80px 40px 40px;
+      min-height: 100%;
+      padding: 80px 40px 15px;
     }
 
     .list {
@@ -129,7 +127,6 @@ $todo-bg-color: #0a0c0e;
             }
           }
         }
-
         .option {
           position: absolute;
           right: 10px;
@@ -140,25 +137,6 @@ $todo-bg-color: #0a0c0e;
             height: auto;
           }
         }
-
-        &.active {
-          .import {
-            border: none;
-            background-image: linear-gradient(
-              to right top,
-              #b71c24,
-              #c41c3c,
-              #cf2154,
-              #d72c6d,
-              #db3a86
-            );
-
-            button {
-              color: $todo-white-color;
-            }
-          }
-        }
-
         .con {
           padding: 15px;
           border: 1px solid $todo-default-color;
@@ -297,6 +275,131 @@ $todo-bg-color: #0a0c0e;
             border-bottom: 8px solid $todo-default-color;
             transform: rotate(45deg);
           }
+        }
+
+        &.active {
+          .import {
+            border: none;
+            background-image: linear-gradient(
+              to right top,
+              #b71c24,
+              #c41c3c,
+              #cf2154,
+              #d72c6d,
+              #db3a86
+            );
+
+            button {
+              color: $todo-white-color;
+            }
+          }
+        }
+        &.flipInX {
+          animation-duration: 2s;
+          animation-fill-mode: both;
+          animation-name: flipInX;
+        }
+        @keyframes flipInX {
+          from {
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            animation-timing-function: ease-in;
+            opacity: 0;
+          }
+
+          40% {
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            animation-timing-function: ease-in;
+          }
+
+          60% {
+            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            opacity: 1;
+          }
+
+          80% {
+            transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+          }
+
+          to {
+            transform: perspective(400px);
+          }
+        }
+        &.slideInUp {
+          animation-duration: 0.5s;
+          animation-fill-mode: both;
+          animation-name: slideInUp;
+        }
+        @keyframes slideInUp {
+          from {
+            opacity: 0;
+            transform: translate3d(0, 50%, 0);
+            visibility: visible;
+          }
+
+          to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+
+  .login {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .area {
+      position: relative;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 390px;
+      margin: -93px 0 0 -195px;
+      padding: 20px;
+      border: 3px solid #323b44;
+      background-color: #fff;
+      border-radius: 10px;
+
+      .form {
+        > div {
+          margin-top: 10px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          span {
+            display: inline-block;
+            width: 90px;
+            padding-top: 3px;
+            vertical-align: middle;
+          }
+          input {
+            width: 250px;
+            height: 40px;
+            padding: 0 10px;
+          }
+        }
+      }
+      .btn {
+        margin-top: 20px;
+
+        button {
+          display: block;
+          width: 100%;
+          padding: 5px 0;
+          color: #fff;
+          background-color: #323b44;
+          border-radius: 4px;
         }
       }
     }

@@ -11,7 +11,12 @@ class TodoTodo extends Component {
   // 쓰기
   handleTodoWrite = (inputValue, tagValue) => {
     const { todo } = this.props;
-    todo.actTodoWrite(inputValue, tagValue);
+    if (inputValue === '' || tagValue === '') {
+      alert('ddddddd');
+      return false;
+    }
+    return false;
+    // todo.actTodoWrite(inputValue, tagValue);
   };
 
   render() {
@@ -23,7 +28,7 @@ class TodoTodo extends Component {
 
     const defaultList = todo.todoList.filter((todo) => todo.btnTodo);
     const todoList = defaultList.map((info, index) => {
-      return <TodoTodoList info={info} key={index} />;
+      return <TodoTodoList info={info} key={index} index={index} />;
     });
 
     return (
@@ -32,7 +37,7 @@ class TodoTodo extends Component {
         <TodoTodoSearch onTodoWrite={handleTodoWrite} tagList={todo.tagList} />
 
         {!todoList.length && (
-          <div className="empty">등록 된 내용이 없습니다.</div>
+          <div className="empty">등록된 내용이 없습니다.</div>
         )}
         <ul className="list">{todoList}</ul>
 

@@ -36,7 +36,7 @@ class TodoItem extends Component {
               <div className="line">
                 <p className="t">나만의 Todo</p>
                 <p className="u">ReactApp</p>
-                <p className="s">2018.12.06</p>
+                <p className="s">2020.08.25</p>
               </div>
             </div>
           </div>

@@ -18,7 +18,13 @@ class TodoCompleteList extends Component {
 
     if (!todo.todoList.length) return false;
 
-    const completeList = todo.todoList.filter((todo) => todo.btnComplete);
+    const completeList = todo.todoList
+      .filter((todo) => todo.btnComplete)
+      .sort(
+        (curr, next) =>
+          new Date(next.completeDate).getTime() -
+          new Date(curr.completeDate).getTime()
+      );
     const tag = completeList.map((info) => info.tags);
     const tagChoice = Array.from(new Set(tag)).sort();
 
@@ -41,7 +47,7 @@ class TodoCompleteList extends Component {
     );
 
     const todoCompleteLists = todoCompleteTags.map((info, index) => {
-      return <TodoCompleteListSub info={info} key={index} />;
+      return <TodoCompleteListSub info={info} key={index} index={index} />;
     });
 
     return (

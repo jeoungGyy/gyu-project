@@ -103,7 +103,7 @@ class TodoTodoList extends Component {
       handleConfirm,
       handleComplete,
     } = this;
-    const { info } = this.props;
+    const { info, index } = this.props;
     const { toggle, commentToggle } = this.state;
 
     const dateString = info.createdDate
@@ -122,7 +122,7 @@ class TodoTodoList extends Component {
     });
 
     return (
-      <li>
+      <li className="flipInX" style={{ animationDelay: index * 200 + 'ms' }}>
         <div className={`import ${info.important && 'active'}`}>
           <button type="button" onClick={handleImportantCheck}>
             <Icon icon={ic_priority_high} title="긴급" />

@@ -91,3 +91,16 @@ export function todoPatch(id, patchDdata) {
   // console.log(patchDdata);
   return axios.patch(`/api/todos/${id}`, patchDdata, { headers });
 }
+
+/* 로그인 */
+export function authLogin(loginData) {
+  return axios.post('/api/auth/login', loginData, { headers });
+}
+/* 로그인 체크 */
+export function authCheck() {
+  return axios.get('/api/auth/check', { headers });
+}
+/* 로그아웃 */
+export function actAuthLogout() {
+  return axios.post('/api/auth/logout', { headers });
+}

@@ -3,8 +3,9 @@ import * as api from '../lib/api';
 
 export default class PostStore {
   @observable.ref todoList = [];
-  @observable.ref tagList = []; //Tga 셀렉트에 담을때 사용
-  @observable.ref tagName = '전체'; // 완료 Hash 태그 선택
+  @observable tagList = []; //Tga 셀렉트에 담을때 사용
+  @observable tagName = '전체'; // 완료 Hash 태그 선택
+  @observable loginToggle = true; // 로그인 창 Toggle
 
   constructor(root) {
     this.root = root;
@@ -28,20 +29,13 @@ export default class PostStore {
       // });
 
       const tag = data.map((info) => info.tags);
-      let tagChoice = tag
-        .reduce(function (a, b) {
-          if (a.indexOf(b) < 0) a.push(b);
-          return a;
-        }, [])
-        .sort();
+      const tagChoice = Array.from(new Set(tag)).sort();
 
       this.todoList = data;
       this.tagList = tagChoice;
-      console.log('읽기 완료!');
     } catch (e) {
       console.log('Error: 읽기에 실패했습니다.');
     }
-
     this.root.common.subLoading = false;
   };
 
@@ -204,15 +198,39 @@ export default class PostStore {
     this.tagName = value;
   };
 
-  // 할일 콘트롤 창 열기 - 안씀
+  // 로그인
   @action
-  actTodoControle = (id) => {
-    // console.log(id);
-    // const index = this.todoList.findIndex((info) => info._id === id);
-    // let selected = this.todoList[index];
-    // if (!selected) {
-    // } else {
-    //   selected.important = true;
-    // }
+  actAuthLogin = async () => {
+    const loginData = JSON.stringify({
+      email: '2@2.com',
+      password: '2',
+    });
+
+    try {
+      await api.authLogin(loginData);
+    } catch (e) {
+      console.log('Error: 로그인에 실패했습니다.');
+    }
+  };
+  // 로그인 체크
+  @action
+  actAuthCheck = async () => {
+    try {
+      const response = await api.authCheck();
+
+      console.log(response.data);
+    } catch (e) {
+      // this.loginToggle = false;
+      console.log('Error: 로그인 체크에 실패했습니다.');
+    }
+  };
+  // 로그아웃
+  @action
+  actAuthLogout = async () => {
+    try {
+      await api.actAuthLogout();
+    } catch (e) {
+      console.log('Error: 로그아웃에 실패했습니다.');
+    }
   };
 }

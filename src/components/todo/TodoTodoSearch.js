@@ -8,6 +8,11 @@ class TodoTodoSearch extends Component {
     tagValue: '',
   };
 
+  input = null;
+  componentDidMount() {
+    this.refs.input.focus();
+  }
+
   stateInputValue = (e) => {
     e.preventDefault();
     let value = e.target.value;
@@ -43,10 +48,20 @@ class TodoTodoSearch extends Component {
     });
 
     return (
-      <form onSubmit={() => onTodoWrite(inputValue, tagValue)}>
+      <div>
         <div className="search_input">
-          <input type="text" onChange={stateInputValue} value={inputValue} />
-          <button>
+          <input
+            type="text"
+            onChange={stateInputValue}
+            value={inputValue}
+            ref={(ref) => {
+              this.input = ref;
+            }}
+          />
+          <button
+            type="button"
+            onClick={() => onTodoWrite(inputValue, tagValue)}
+          >
             <Icon icon={ic_create} title="검색" />
           </button>
         </div>
@@ -62,7 +77,7 @@ class TodoTodoSearch extends Component {
             {tags}
           </select>
         </div>
-      </form>
+      </div>
     );
   }
 }

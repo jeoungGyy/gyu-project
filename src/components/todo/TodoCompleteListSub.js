@@ -38,7 +38,7 @@ class TodoCompleteListSub extends Component {
 
   render() {
     const { stateToggle, handleConfirm, handleTodo } = this;
-    const { info } = this.props;
+    const { info, index } = this.props;
     const { toggle } = this.state;
 
     const dateString = info.createdDate
@@ -55,7 +55,7 @@ class TodoCompleteListSub extends Component {
     const month = info.completeDate.substring(5, 10);
 
     return (
-      <li>
+      <li className="slideInUp" style={{ animationDelay: index * 100 + 'ms' }}>
         <div className="compleateDate">
           <div className="items">
             <p className="y">{year}</p>
