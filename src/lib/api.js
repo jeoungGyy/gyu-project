@@ -87,8 +87,6 @@ export function todoDelete(id) {
 }
 /* Todo 수정 */
 export function todoPatch(id, patchDdata) {
-  // console.log(id);
-  // console.log(patchDdata);
   return axios.patch(`/api/todos/${id}`, patchDdata, { headers });
 }
 

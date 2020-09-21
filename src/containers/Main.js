@@ -21,6 +21,9 @@ import './Main.scss';
 @inject('common')
 @observer
 class Main extends Component {
+  componentDidMount() {
+    setTimeout(() => this.loadingFalse(), 400);
+  }
   componentDidUpdate(prevProps, prevState) {
     window.onpopstate = () => {
       let pathname = this.props.history.location.pathname.substring(1);
@@ -30,6 +33,12 @@ class Main extends Component {
       const { common } = this.props.common.root;
       common.loadingDelay(push, pathname);
     };
+    setTimeout(() => this.loadingFalse(), 400);
+  }
+
+  loadingFalse() {
+    const { common } = this.props.common.root;
+    common.loading = false;
   }
 
   render() {

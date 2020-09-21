@@ -37,7 +37,7 @@ export default class MovieStore {
   constructor(root) {
     this.root = root;
 
-    // this.actMovieList();
+    this.actMovieList();
   }
 
   @action

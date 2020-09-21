@@ -23,18 +23,18 @@ class MoviePageDay extends Component {
   delayPageMove = (pageName, e) => {
     e.preventDefault();
     const {
-      history: { push }
+      history: { push },
     } = this.props;
     const { common } = this.props.movie.root;
     common.loadingDelay(push, pageName);
   };
 
-  handleMovieList = e => {
+  handleMovieList = (e) => {
     const { movie } = this.props;
     movie.actMovieList(e.target.value);
   };
 
-  handleDayLayerToggle = value => {
+  handleDayLayerToggle = (value) => {
     const { movie } = this.props;
     movie.actDayLayerToggle(value);
   };
@@ -44,28 +44,28 @@ class MoviePageDay extends Component {
     movie.actDayLayerClose();
   };
 
-  handleMovieSearch = value => {
+  handleMovieSearch = (value) => {
     const { movie } = this.props;
     movie.actMovieSearch(value);
   };
 
-  handleDayChange = day => {
+  handleDayChange = (day) => {
     const { movie } = this.props;
     movie.actDayChange(day);
   };
 
-  handleMovieInSearch = e => {
+  handleMovieInSearch = (e) => {
     e.preventDefault();
     const { movie } = this.props;
     movie.actMovieInSearch();
   };
 
-  handleSelectChoice = e => {
+  handleSelectChoice = (e) => {
     const { movie } = this.props;
     let value = e.target.value;
     movie.actSelectChoice(value);
   };
-  handleInputChoice = e => {
+  handleInputChoice = (e) => {
     const { movie } = this.props;
     let value = e.target.value;
     movie.actInputChoice(value);
@@ -76,7 +76,7 @@ class MoviePageDay extends Component {
     movie.actListMore();
   };
 
-  handleMovieInAnchor = e => {
+  handleMovieInAnchor = (e) => {
     // const { movie } = this.props;
     // let targetName = e.currentTarget.textContent;
     // movie.actMovieInAnchor(targetName);
@@ -94,7 +94,7 @@ class MoviePageDay extends Component {
       handleSelectChoice,
       handleInputChoice,
       handleListMore,
-      handleMovieInAnchor
+      handleMovieInAnchor,
     } = this;
     const { movie } = this.props;
     const { subLoading } = this.props.movie.root.common;
@@ -148,7 +148,7 @@ class MoviePageDay extends Component {
           nationAlt={info.nationAlt}
           genreAlt={info.genreAlt}
           directors={info.directors}
-          companys={info.companys.map(companyInfo => companyInfo.companyNm)}
+          companys={info.companys.map((companyInfo) => companyInfo.companyNm)}
           onMovieInAnchor={handleMovieInAnchor}
         />
       );
@@ -301,9 +301,9 @@ class MoviePageDay extends Component {
           </p>
           <Link
             to={{
-              pathname: ''
+              pathname: '',
             }}
-            onClick={e => delayPageMove('', e)}
+            onClick={(e) => delayPageMove('', e)}
           >
             메인
           </Link>

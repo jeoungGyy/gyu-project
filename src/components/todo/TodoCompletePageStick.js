@@ -2,7 +2,12 @@ import React from 'react';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-const TodoCompletePageStick = ({ valueTagChoice, valueYZ }) => {
+const TodoCompletePageStick = ({
+  valueTagChoice,
+  valueYZ,
+  stateData,
+  completeData,
+}) => {
   const options = {
     colors: ['#3bafda'],
     chart: {
@@ -11,7 +16,7 @@ const TodoCompletePageStick = ({ valueTagChoice, valueYZ }) => {
       height: 380,
     },
     title: {
-      text: '최근 30일간 작업 건수',
+      text: '최근 ' + completeData + '일간 작업 완료 건수',
       verticalAlign: 'bottom',
       style: {
         fontSize: '15px',
@@ -22,11 +27,14 @@ const TodoCompletePageStick = ({ valueTagChoice, valueYZ }) => {
     },
     tooltip: {
       shared: true,
+      pointFormat:
+        '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b>',
     },
     yAxis: {
       title: false,
     },
     xAxis: {
+      // categories: valueTagChoice,
       categories: valueTagChoice,
     },
     series: [
@@ -39,6 +47,32 @@ const TodoCompletePageStick = ({ valueTagChoice, valueYZ }) => {
 
   return (
     <div className="column_chart">
+      <div className="cbtns">
+        <button
+          type="button"
+          name="10"
+          className={`${completeData === '10' && 'active'}`}
+          onClick={stateData}
+        >
+          10일
+        </button>
+        <button
+          type="button"
+          name="20"
+          className={`${completeData === '20' && 'active'}`}
+          onClick={stateData}
+        >
+          20일
+        </button>
+        <button
+          type="button"
+          name="30"
+          className={`${completeData === '30' && 'active'}`}
+          onClick={stateData}
+        >
+          30일
+        </button>
+      </div>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div>
   );

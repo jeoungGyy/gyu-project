@@ -19,7 +19,7 @@ export default class common {
 
     setTimeout(() => {
       push('/' + pageName);
-      this.loading = false;
+      // this.loading = false;
     }, 400);
   };
 

@@ -37,7 +37,7 @@ $todo-bg-color: #0a0c0e;
         button {
           float: left;
           vertical-align: middle;
-          width: 20px;
+          min-width: 20px;
           height: 20px;
           margin-right: 5px;
 
@@ -64,10 +64,26 @@ $todo-bg-color: #0a0c0e;
 
       a {
         display: inline-block;
-        padding: 4px 25px;
+        padding: 4px 15px;
         color: #8a929a;
+        vertical-align: middle;
         background-color: #515a63;
-        border-radius: 2px;
+        border-radius: 3px;
+      }
+      button {
+        display: inline-block;
+        height: 22px;
+        margin-right: 4px;
+        padding: 0 15px;
+        color: #ccc;
+        vertical-align: middle;
+        background-color: #2f7d81;
+        border-radius: 3px;
+        transition: all 0.1s ease;
+
+        &:hover {
+          background-color: #246c70;
+        }
       }
     }
   }
@@ -238,7 +254,7 @@ $todo-bg-color: #0a0c0e;
           position: absolute;
           right: -34px;
           top: 0;
-          z-index: 2;
+          z-index: 20;
           border: 1px solid $todo-default-color;
           border-radius: 2px;
           background-color: #fff;
@@ -295,7 +311,7 @@ $todo-bg-color: #0a0c0e;
           }
         }
         &.flipInX {
-          animation-duration: 2s;
+          animation-duration: 0.8s;
           animation-fill-mode: both;
           animation-name: flipInX;
         }
@@ -401,6 +417,18 @@ $todo-bg-color: #0a0c0e;
           background-color: #323b44;
           border-radius: 4px;
         }
+      }
+      .close {
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        font-size: 14px;
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        background-color: #323b44;
+        border: 1px solid #496d92;
+        border-radius: 50%;
       }
     }
   }

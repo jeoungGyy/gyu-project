@@ -1,29 +1,39 @@
-import React, { Component } from 'react';
-import { inject, observer } from 'mobx-react';
+import React from 'react';
 import TodoConfirmList from './TodoConfirmList';
 
 import './TodoConfirm.scss';
 
-@inject('todo')
-@observer
-class TodoConfirm extends Component {
-  render() {
-    const { todo } = this.props;
+const TodoConfirm = ({
+  todoList,
+  onTodoDelete,
+  onTodo,
+  onComplete,
+  onSubListPatch,
+  onCommentPatch,
+}) => {
+  const confirm = todoList.filter((confirm) => confirm.btnConfirm);
 
-    const confirm = todo.todoList.filter((confirm) => confirm.btnConfirm);
-
-    const confirmList = confirm.map((info, index) => {
-      return <TodoConfirmList info={info} key={index} />;
-    });
-
+  const confirmList = confirm.map((info, index) => {
     return (
-      <div className="TodoConfirm">
-        <h3>확인</h3>
-
-        <ul className="list">{confirmList}</ul>
-      </div>
+      <TodoConfirmList
+        info={info}
+        key={index}
+        onTodoDelete={onTodoDelete}
+        onTodo={onTodo}
+        onComplete={onComplete}
+        onSubListPatch={onSubListPatch}
+        onCommentPatch={onCommentPatch}
+      />
     );
-  }
-}
+  });
+
+  return (
+    <div className="TodoConfirm">
+      <h3>확인</h3>
+
+      <ul className="list">{confirmList}</ul>
+    </div>
+  );
+};
 
 export default TodoConfirm;

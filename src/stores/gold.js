@@ -18,7 +18,7 @@ export default class goldStore {
   constructor(root) {
     this.root = root;
 
-    // this.actGoldList();
+    this.actGoldList();
   }
 
   @action
