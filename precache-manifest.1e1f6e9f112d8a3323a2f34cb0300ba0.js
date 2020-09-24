@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7454a8495d7d929caeb8dfefb24d8416",
+    "revision": "fceda4ab3200ec0fc54ac12d66fe073f",
     "url": "/gyu-project/index.html"
   },
   {
-    "revision": "7d0be6cfce18d54994b4",
-    "url": "/gyu-project/static/css/2.2b845a22.chunk.css"
+    "revision": "fa47de76988883af3dfe",
+    "url": "/gyu-project/static/css/2.f4cbe1a2.chunk.css"
   },
   {
-    "revision": "7c564668d9215b57e7d2",
-    "url": "/gyu-project/static/css/main.cdd31466.chunk.css"
+    "revision": "ab6bcb471deb3fd95f7f",
+    "url": "/gyu-project/static/css/main.c509ed5c.chunk.css"
   },
   {
-    "revision": "7d0be6cfce18d54994b4",
-    "url": "/gyu-project/static/js/2.96bf6ced.chunk.js"
+    "revision": "fa47de76988883af3dfe",
+    "url": "/gyu-project/static/js/2.e343f35a.chunk.js"
   },
   {
-    "revision": "7c564668d9215b57e7d2",
-    "url": "/gyu-project/static/js/main.9989a841.chunk.js"
+    "revision": "0f1c1192f8d9f2774075807941854cf0",
+    "url": "/gyu-project/static/js/2.e343f35a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1829e5258d84f5e2c28d",
-    "url": "/gyu-project/static/js/runtime~main.2a4a6a92.js"
+    "revision": "ab6bcb471deb3fd95f7f",
+    "url": "/gyu-project/static/js/main.704a60fb.chunk.js"
+  },
+  {
+    "revision": "245fd67efce4b155f23e",
+    "url": "/gyu-project/static/js/runtime~main.51d203b0.js"
   },
   {
     "revision": "847f2111db9b572762ec173d49b12e1a",
