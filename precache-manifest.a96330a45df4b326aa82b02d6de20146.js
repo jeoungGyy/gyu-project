@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fceda4ab3200ec0fc54ac12d66fe073f",
+    "revision": "a4d5d085894fe46e0badfb74aa79387e",
     "url": "/gyu-project/index.html"
   },
   {
-    "revision": "fa47de76988883af3dfe",
+    "revision": "9a4b54683694d1ad6b62",
     "url": "/gyu-project/static/css/2.f4cbe1a2.chunk.css"
   },
   {
-    "revision": "ab6bcb471deb3fd95f7f",
-    "url": "/gyu-project/static/css/main.c509ed5c.chunk.css"
+    "revision": "14e98ad18b6385d1b148",
+    "url": "/gyu-project/static/css/main.a7405651.chunk.css"
   },
   {
-    "revision": "fa47de76988883af3dfe",
-    "url": "/gyu-project/static/js/2.e343f35a.chunk.js"
+    "revision": "9a4b54683694d1ad6b62",
+    "url": "/gyu-project/static/js/2.c50e5af5.chunk.js"
   },
   {
     "revision": "0f1c1192f8d9f2774075807941854cf0",
-    "url": "/gyu-project/static/js/2.e343f35a.chunk.js.LICENSE.txt"
+    "url": "/gyu-project/static/js/2.c50e5af5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ab6bcb471deb3fd95f7f",
-    "url": "/gyu-project/static/js/main.704a60fb.chunk.js"
+    "revision": "14e98ad18b6385d1b148",
+    "url": "/gyu-project/static/js/main.eb72242f.chunk.js"
   },
   {
     "revision": "245fd67efce4b155f23e",
