@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 @inject('exchange')
 @observer
 class ExchangeItem extends Component {
-  delayPageMove = pageName => {
+  delayPageMove = (pageName) => {
     const {
-      history: { push }
+      history: { push },
     } = this.props;
     const { common } = this.props.exchange.root;
     common.loadingDelay(push, pageName);
@@ -20,11 +20,11 @@ class ExchangeItem extends Component {
       <li className="exchange">
         <Link
           to={{
-            pathname: ''
+            pathname: '',
           }}
           onClick={() => delayPageMove('exchange')}
         >
-          ExchangeItem
+          파일 업로드 테스트
         </Link>
       </li>
     );

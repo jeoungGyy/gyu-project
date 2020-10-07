@@ -16,6 +16,7 @@ Front-End
 - react-day-picker
 - sass-loader
 - rc-slider
+- terser-webpack-plugin
 
 Back-End
 
@@ -26,3 +27,5 @@ Back-End
 - Joi
 - jsonwebtoken
 - dotenv
+- multer
+- @koa/multer

@@ -190,6 +190,14 @@ $todo-default-color: #717e8a;
           .title {
             color: #97a2ad;
           }
+          .sublist {
+            li {
+              p {
+                padding-right: 0;
+                text-indent: 0;
+              }
+            }
+          }
         }
         .option {
           svg {

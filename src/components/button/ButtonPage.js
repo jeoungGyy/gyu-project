@@ -3,7 +3,7 @@ import ButtonColor from './ButtonColor';
 import ButtonGradation from './ButtonGradation';
 import ButtonDefault from './ButtonDefault';
 import ButtonHover from './ButtonHover';
-import ButtonClick from './ButtonClick';
+// import ButtonClick from './ButtonClick';
 import './ButtonPage.scss';
 
 const ButtonPage = () => {
@@ -23,8 +23,8 @@ const ButtonPage = () => {
       <h3>Hover 버튼</h3>
       <ButtonHover />
 
-      <h3>Click 버튼</h3>
-      <ButtonClick />
+      {/* <h3>Click 버튼</h3>
+      <ButtonClick /> */}
     </div>
   );
 };

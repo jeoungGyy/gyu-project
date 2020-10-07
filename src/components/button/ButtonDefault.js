@@ -19,10 +19,6 @@ const ButtonDefault = () => {
           <button className="DC_button">TEXT</button>
         </div>
       </li>
-      <li>11111111</li>
-      <li>11111111</li>
-      <li>11111111</li>
-      <li>11111111</li>
     </ul>
   );
 };

@@ -82,8 +82,6 @@ const ButtonHover = () => {
       <li>
         <button className="Hr">Peter River</button>
       </li>
-      <li>11111</li>
-      <li>11111</li>
     </ul>
   );
 };

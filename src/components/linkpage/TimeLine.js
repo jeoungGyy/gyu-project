@@ -6,10 +6,11 @@ import ReactSVG from '../../images/react_logo.svg';
 const TimeLine = () => {
   return (
     <li>
-      <a
-        href="//d1d7owdiau2n6k.cloudfront.net/index.html"
-        target="_blank"
-        rel="noopener noreferrer"
+      <div
+        className="nolink"
+        onClick={() => {
+          alert('AWS 무료 사용기한 만료로 사용이 중지됩니다.');
+        }}
       >
         <div className="img">
           <img src={require('../../images/project_img2.png')} alt="" />
@@ -26,7 +27,7 @@ const TimeLine = () => {
             <p className="s">2019.02.13</p>
           </div>
         </div>
-      </a>
+      </div>
     </li>
   );
 };

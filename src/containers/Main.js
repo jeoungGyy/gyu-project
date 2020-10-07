@@ -16,6 +16,7 @@ import LottoItem from '../components/lotto/LottoItem';
 import MaskItem from '../components/mask/MaskItem';
 import ButtonItem from '../components/button/ButtonItem';
 import TodoItem from '../components/todo/TodoItem';
+// import ExchangeItem from '../components/exchange/ExchangeItem';
 import './Main.scss';
 
 @inject('common')
@@ -60,8 +61,9 @@ class Main extends Component {
               options={masonryOptions} // default {}
             >
               <WeatherItem />
-              <FreeFonts />
               <TodoItem history={this.props.history} />
+              <FreeFonts />
+              {/* <ExchangeItem history={this.props.history} /> */}
               <MovieItem history={this.props.history} />
               <GoldItem history={this.props.history} />
               <ButtonItem history={this.props.history} />

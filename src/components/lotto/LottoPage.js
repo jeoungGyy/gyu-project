@@ -8,16 +8,15 @@ import './LottoPage.scss';
 @inject('lotto')
 @observer
 class LottoPage extends Component {
-  delayPageLotto = pageName => {
+  delayPageLotto = (pageName) => {
     const {
-      history: { push }
+      history: { push },
     } = this.props;
-    console.log(push);
     const { common } = this.props.lotto.root;
     common.loadingDelay(push, pageName);
   };
 
-  handleRoundSelect = e => {
+  handleRoundSelect = (e) => {
     const { lotto } = this.props;
     const value = e.target.value;
     lotto.actRoundSelect(value);

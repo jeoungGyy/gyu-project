@@ -7,6 +7,7 @@ import LottoPage from '../components/lotto/LottoPage';
 import MaskPage from '../components/mask/MaskPage';
 import ButtonPage from '../components/button/ButtonPage';
 import TodoPage from '../components/todo/TodoPage';
+// import ExchangePage from '../components/exchange/ExchangePage';
 
 class PageRouter extends Component {
   render() {
@@ -19,6 +20,7 @@ class PageRouter extends Component {
         <Route path="/mask" component={MaskPage} />
         <Route path="/button" component={ButtonPage} />
         <Route path="/todo" component={TodoPage} />
+        {/* <Route path="/exchange" component={ExchangePage} /> */}
       </Router>
     );
   }

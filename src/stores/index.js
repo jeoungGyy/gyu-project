@@ -7,6 +7,7 @@ import Gold from './gold';
 import Lotto from './lotto';
 import Mask from './mask';
 import Button from './button';
+import Exchange from './exchange';
 
 class RootStore {
   constructor() {
@@ -19,6 +20,7 @@ class RootStore {
     this.lotto = new Lotto(this);
     this.mask = new Mask(this);
     this.button = new Button(this);
+    this.exchange = new Exchange(this);
   }
 }
 

@@ -45,7 +45,7 @@
     "jest-watch-typeahead": "0.3.0",
     "mini-css-extract-plugin": "0.5.0",
     "mobx": "^5.9.4",
-    "mobx-react": "^5.4.3",
+    "mobx-react": "6.3.0",
     "mobx-react-devtools": "^6.1.1",
     "mobx-react-router": "^4.0.7",
     "node-sass": "^4.14.1",
@@ -72,10 +72,10 @@
     "sass-loader": "7.1.0",
     "semver": "6.0.0",
     "style-loader": "0.23.1",
-    "terser-webpack-plugin": "1.2.3",
+    "terser-webpack-plugin": "^4.2.2",
     "url-loader": "1.1.2",
     "webpack": "4.29.6",
-    "webpack-dev-server": "3.2.1",
+    "webpack-dev-server": "^3.11.0",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.2.0"
   },
@@ -170,5 +170,6 @@
     "@babel/preset-env": "^7.10.2",
     "gh-pages": "^2.0.1"
   },
-  "proxy": "http://localhost:4000/"
+  "proxy": "http://localhost:4000/",
+  "secure": false
 }

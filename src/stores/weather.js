@@ -6,7 +6,7 @@ export default class weather {
 
   constructor(root) {
     this.root = root;
-    // this.weatherList();
+    this.weatherList();
   }
 
   @action
@@ -18,6 +18,7 @@ export default class weather {
     try {
       const response = await api.weatherData(dateMMMM, dateHH);
       const data = response.data.response.body.items.item;
+
       this.selectedItems = this.selectedItems.concat(...data);
     } catch (e) {
       console.log(e);
