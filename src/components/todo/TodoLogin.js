@@ -17,7 +17,7 @@ const TodoLogin = ({ onAuthLogin, onAuthClose }) => {
   return (
     <div className="login">
       <div className="area">
-        <form className="form">
+        <form className="login-form">
           <div>
             <span>아이디</span>{' '}
             <input

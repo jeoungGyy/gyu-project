@@ -5,9 +5,9 @@ import MoviePage from '../components/movie/MoviePage';
 import GoldPage from '../components/gold/GoldPage';
 import LottoPage from '../components/lotto/LottoPage';
 import MaskPage from '../components/mask/MaskPage';
-import ButtonPage from '../components/button/ButtonPage';
 import TodoPage from '../components/todo/TodoPage';
-// import ExchangePage from '../components/exchange/ExchangePage';
+import ExchangePage from '../components/exchange/ExchangePage';
+import CapturingPage from '../components/capturing/Page';
 
 class PageRouter extends Component {
   render() {
@@ -18,9 +18,9 @@ class PageRouter extends Component {
         <Route path="/gold" component={GoldPage} />
         <Route path="/lotto" component={LottoPage} />
         <Route path="/mask" component={MaskPage} />
-        <Route path="/button" component={ButtonPage} />
         <Route path="/todo" component={TodoPage} />
-        {/* <Route path="/exchange" component={ExchangePage} /> */}
+        <Route path="/exchange" component={ExchangePage} />
+        <Route path="/capturing" component={CapturingPage} />
       </Router>
     );
   }

@@ -279,8 +279,7 @@ export default class PostStore {
   @action
   actAuthCheck = async () => {
     try {
-      const response = await api.authCheck();
-      console.log(response.data);
+      await api.authCheck();
       this.loginOrLogout = false;
     } catch (e) {
       console.log('Error: 로그인 체크에 실패했습니다.');

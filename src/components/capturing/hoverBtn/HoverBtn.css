@@ -1,0 +1,646 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-content: space-around;
+  align-items: center;
+}
+.flex li {
+  margin: 10px;
+}
+
+.Ha {
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.Ha:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.Hb {
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.Hb:hover {
+  color: #fff;
+  background: transparent;
+  box-shadow: inset 0 0 0 36px #000;
+}
+
+.Hc {
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.Hc:hover {
+  box-shadow: 0 0 0 18px transparent;
+  animation: Hc_pulse 1s;
+}
+@keyframes Hc_pulse {
+  from {
+    box-shadow: 0 0 0 0 #000;
+  }
+}
+
+.Hd {
+  position: relative;
+  z-index: 1;
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.Hd::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+.Hd:hover {
+  color: #fff;
+  background: transparent;
+}
+.Hd:hover::before {
+  transform: scaleX(1);
+}
+
+.He {
+  position: relative;
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.He:hover {
+  color: #fff;
+  box-shadow: inset 54px 0 0 0 #000, inset -54px 0 0 0 #000;
+}
+
+.Hf {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.Hf::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 120%;
+  height: 210%;
+  background: #000;
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(0);
+  transition: 0.3s;
+}
+.Hf:hover {
+  color: #fff;
+  background: transparent;
+}
+.Hf:hover::before {
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(1);
+}
+
+.Hg {
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.Hg:hover {
+  color: #fff;
+  background: transparent;
+  box-shadow: inset 0 -54px 0 0 #000;
+}
+
+.Hh {
+  overflow: hidden;
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.Hh:hover {
+  color: #fff;
+  background: transparent;
+  box-shadow: inset 90px 0 0 0 #000;
+}
+
+.Hi {
+  position: relative;
+  z-index: 1;
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.Hi::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.Hi:hover {
+  color: #fff;
+  background: transparent;
+}
+.Hi:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.Hj {
+  padding: 12px 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transform: rotate(0);
+  transition: 0.3s;
+}
+.Hj::before,
+.Hj::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 50%;
+  background: #000;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.Hj::before {
+  top: 0;
+  transform-origin: left;
+}
+.Hj::after {
+  top: 50%;
+  transform-origin: right;
+}
+.Hj:hover {
+  color: #fff;
+  background: transparent;
+}
+.Hj:hover::before,
+.Hj:hover::after {
+  transform: scaleX(1);
+}
+.Hj:hover::before {
+  transform-origin: right;
+}
+.Hj:hover::after {
+  transform-origin: left;
+}
+
+.Hk {
+  overflow: hidden;
+  position: relative;
+  padding: 9px 20px;
+  color: #fff;
+  border: 4px solid #000;
+  box-shadow: 0px 0px 0px 1px #000 inset;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.Hk span {
+  transition: all 0.2s ease-out;
+  z-index: 2;
+}
+.Hk :hover {
+  color: #000;
+  border: 4px solid #000;
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 4px #eee inset;
+}
+.Hk :hover span {
+  letter-spacing: 0.13em;
+  color: #333;
+}
+.Hk :hover::after {
+  background: #fff;
+  border: 20px solid #000;
+  opacity: 0;
+  left: 120%;
+  transform: rotate(40deg);
+}
+.Hk::after {
+  background: #fff;
+  border: 0px solid #000;
+  content: '';
+  height: 155px;
+  left: -75px;
+  opacity: 0.8;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  width: 50px;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1); /*easeOutCirc*/
+  z-index: 1;
+}
+
+.Hl {
+  overflow: hidden;
+  position: relative;
+  width: 240px;
+  padding: 40px;
+  margin: 0 auto;
+  border: 0;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 10px 20px -5px #94a6af;
+}
+.Hl::before,
+.Hl::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.Hl::before,
+.Hl::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  padding: 25px 0;
+  transition: 0.3s ease all;
+}
+.Hl::before {
+  transform: scale(1);
+  background-image: url('https://himalayasingh.github.io/button-hover-effect-1/img/bg.jpg');
+  background-size: cover;
+  transition: 0.3s ease transform;
+  z-index: 1;
+}
+.Hl::after {
+  background-color: #000;
+  opacity: 0.16;
+  z-index: 2;
+}
+.Hl div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.Hl div::before {
+  content: 'HOVER';
+  letter-spacing: 0;
+  opacity: 1;
+  transform: scale(1);
+}
+.Hl div::after {
+  content: 'YEAH !';
+  letter-spacing: -10px;
+  transform: scale(0);
+  opacity: 0;
+}
+.Hl:hover::before {
+  transform: scale(1.3);
+}
+.Hl:hover div::before {
+  letter-spacing: 3px;
+  opacity: 0;
+  transform: scale(4);
+}
+.Hl:hover div::after {
+  letter-spacing: 0;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.Hm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.Hm svg {
+  height: 55px;
+  width: 150px;
+  fill: none;
+  stroke-width: 5;
+}
+.Hm svg .o1 {
+  stroke: rgba(#ffb341, 0.7);
+  fill: #ffa114;
+  transition: all 1s ease-in-out;
+}
+.Hm svg .o2 {
+  stroke: white;
+  stroke-dasharray: 20 420;
+  stroke-dashoffset: 20;
+  transition: all 1s ease-in-out;
+}
+.Hm span {
+  position: absolute;
+  margin: auto 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.Hm:hover .o1 {
+  fill: rgba(#cc8110, 0.3);
+}
+.Hm:hover .o2 {
+  stroke-dashoffset: -420;
+}
+
+.Hn {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: #404040;
+  margin: 0 30px;
+  transition: 0.5s;
+}
+.Hn span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+.Hn span:nth-child(1),
+.Hn span:nth-child(3) {
+  width: 100%;
+  height: 3px;
+  background: #404040;
+}
+.Hn span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+.Hn span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+.Hn span:nth-child(2),
+.Hn span:nth-child(4) {
+  width: 3px;
+  height: 100%;
+  background: #404040;
+}
+.Hn span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+.Hn span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+.Hn:hover {
+  color: #3b5998;
+}
+.Hn:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+.Hn:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+.Hn:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+.Hn:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.Ho {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 60px;
+  width: 210px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+}
+.Ho span {
+  color: #164ca7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+.Ho:hover {
+  animation: Ho_rotate 0.7s ease-in-out both;
+}
+.Ho:hover span {
+  animation: Ho_storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+@keyframes Ho_rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+@keyframes Ho_storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+.Hp {
+  padding: 15px 20px;
+  border-radius: 999px;
+  border: 5px solid #000;
+  font-size: 25px;
+  white-space: nowrap;
+  color: #fff;
+  text-shadow: 0 0 3px #666;
+  background: transparent;
+  background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
+  background-repeat: repeat-x;
+  background-position: 0 -100%;
+  transition: 2.5s ease;
+}
+.Hp:hover {
+  background-position: 500% 100%;
+}
+
+.Hq {
+  padding: 15px;
+}
+.Hq button {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+}
+.Hq button:after {
+  transition: 0.3s all ease;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 3px;
+  border: 3px solid #b15947;
+}
+.Hq button:before {
+  content: '';
+  position: absolute;
+  border-radius: 3px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg);
+  background: #fff;
+  z-index: -1;
+}
+.Hq button:hover :after {
+  transform: rotate(45deg);
+}
+.Hq button:active {
+  transform: scale(1.1);
+}
+.Hq button:active:before {
+  background-color: #f1481b;
+}
+.Hq button:active:after {
+  border-color: #f1481b;
+}
+
+.Hr {
+  display: inline-block;
+  line-height: 35px;
+  margin: 8px;
+  padding: 0 15px;
+  font-size: 15px;
+  position: relative;
+  opacity: 0.999;
+  border-radius: 3px;
+  transition: all 0.3s;
+  background-color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  color: #a6a6a6;
+}
+.Hr::before,
+.Hr::after {
+  content: '';
+  border-style: solid;
+  position: absolute;
+  z-index: 5;
+  border-radius: 3px;
+  border-color: #3498db;
+  box-sizing: content-box;
+  transition: all 0.3s;
+}
+.Hr::before {
+  width: 0;
+  height: 100%;
+  border-width: 1px 0 1px 0;
+  top: -1px;
+  left: 0;
+  transition-delay: 0.05s;
+}
+.Hr::after {
+  width: 100%;
+  height: 0;
+  border-width: 0 1px 0 1px;
+  top: 0;
+  left: -1px;
+}
+.Hr:hover {
+  color: #3498db;
+  background-color: transparent;
+}
+.Hr:hover::before {
+  width: 100%;
+}
+.Hr:hover::after {
+  height: 100%;
+}

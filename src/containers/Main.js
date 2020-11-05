@@ -9,14 +9,15 @@ import {
   CardHistory,
   PublishV2,
   PublishV1,
+  Todo,
 } from '../components/linkpage';
 import MovieItem from '../components/movie/MovieItem';
 import GoldItem from '../components/gold/GoldItem';
 import LottoItem from '../components/lotto/LottoItem';
 import MaskItem from '../components/mask/MaskItem';
-import ButtonItem from '../components/button/ButtonItem';
 import TodoItem from '../components/todo/TodoItem';
 // import ExchangeItem from '../components/exchange/ExchangeItem';
+import CapturingItem from '../components/capturing/Item';
 import './Main.scss';
 
 @inject('common')
@@ -61,14 +62,15 @@ class Main extends Component {
               options={masonryOptions} // default {}
             >
               <WeatherItem />
+              <CapturingItem history={this.props.history} />
               <TodoItem history={this.props.history} />
               <FreeFonts />
               {/* <ExchangeItem history={this.props.history} /> */}
               <MovieItem history={this.props.history} />
               <GoldItem history={this.props.history} />
-              <ButtonItem history={this.props.history} />
               <LottoItem history={this.props.history} />
               <MaskItem history={this.props.history} />
+              <Todo />
               <TimeLine />
               <CardHistory />
               <PublishV2 />

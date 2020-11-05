@@ -19,7 +19,21 @@ export default class goldStore {
     this.root = root;
 
     this.actGoldList();
+    // this.actGoldList2();
   }
+
+  @action
+  actGoldList2 = async () => {
+    try {
+      console.log(1);
+      const response = await api.goldSise2();
+      const data = await response.data;
+      console.log(data);
+      console.log(2);
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   @action
   actGoldList = async () => {

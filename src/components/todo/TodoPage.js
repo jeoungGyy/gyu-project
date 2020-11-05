@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
+import { Link } from 'react-router-dom';
 
 import TodoTodo from './TodoTodo';
 import TodoConfirm from './TodoConfirm';
@@ -81,9 +82,9 @@ class TodoPage extends Component {
   };
 
   // 로그인 관련
-  handleAuthCheck = () => {
-    this.props.actAuthCheck();
-  };
+  // handleAuthCheck = () => {
+  //   this.props.actAuthCheck();
+  // };
   handleAuthLogin = (id, password) => {
     this.props.actAuthLogin(id, password);
   };
@@ -97,7 +98,7 @@ class TodoPage extends Component {
   render() {
     const {
       delayMain,
-      handleAuthCheck,
+      // handleAuthCheck,
       handleAuthLogin,
       handleAuthLogout,
       handleTodoDelete,
@@ -118,6 +119,23 @@ class TodoPage extends Component {
       loginOrLogout,
       subLoading,
     } = this.props;
+
+    if (loginOrLogout) {
+      return (
+        <div className="nodb">
+          <p>DB가 연결되지 않았습니다.</p>
+          <Link
+            to={{
+              pathname: '',
+            }}
+            onClick={(e) => delayMain('', e)}
+          >
+            메인
+          </Link>
+        </div>
+      );
+    }
+
     if (!todoList.length) return false;
 
     return (
@@ -130,7 +148,7 @@ class TodoPage extends Component {
             delayMain={delayMain}
             onAuthClose={handleAuthClose}
             onAuthLogout={handleAuthLogout}
-            onAuthCheck={handleAuthCheck}
+            // onAuthCheck={handleAuthCheck}
             loginOrLogout={loginOrLogout}
           />
         </div>

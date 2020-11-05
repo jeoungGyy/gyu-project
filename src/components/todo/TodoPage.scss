@@ -252,7 +252,7 @@ $todo-bg-color: #0a0c0e;
         }
         .panel {
           position: absolute;
-          right: -34px;
+          right: -35px;
           top: 0;
           z-index: 20;
           border: 1px solid $todo-default-color;
@@ -385,7 +385,7 @@ $todo-bg-color: #0a0c0e;
       background-color: #fff;
       border-radius: 10px;
 
-      .form {
+      .login-form {
         > div {
           margin-top: 10px;
 
@@ -431,5 +431,24 @@ $todo-bg-color: #0a0c0e;
         border-radius: 50%;
       }
     }
+  }
+}
+
+.nodb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+  p {
+    font-size: 30px;
+  }
+  a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 50px;
+    border: 1px solid #bb9726;
+    background-color: #f9c00c;
   }
 }

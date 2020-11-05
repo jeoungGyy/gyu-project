@@ -1,6 +1,6 @@
 // import { observable, action } from 'mobx';
 
-export default class ExchangeStore {
+export default class CapturingStore {
   constructor(root) {
     this.root = root;
   }

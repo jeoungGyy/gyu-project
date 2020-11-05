@@ -57,6 +57,14 @@ export function goldSise(endDay, dayScope) {
     { headers }
   );
 }
+export function goldSise2() {
+  return axios.get(
+    'https://cors-anywhere.herokuapp.com/http://api.koreagoldx.co.kr/api/price/diamond/list',
+    {
+      headers,
+    }
+  );
+}
 
 /* 로또시세 */
 export function lottoSise(round) {

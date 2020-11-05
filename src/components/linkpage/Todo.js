@@ -12,7 +12,7 @@ const Todo = () => {
         rel="noopener noreferrer"
       >
         <div className="img">
-          <img src={require('../../images/project_img4.png')} alt="" />
+          <img src={require('../../images/project_img11.png')} alt="" />
           <div className="round">
             <img src={ReactSVG} alt="React Logo" />
           </div>
@@ -23,7 +23,7 @@ const Todo = () => {
               오늘 할 일 <Icon icon={ic_launch} />
             </p>
             <p className="u">ReactApp (GitHub Hosting)</p>
-            <p className="s">2018.12.06</p>
+            <p className="s">2018.08.23</p>
           </div>
         </div>
       </a>

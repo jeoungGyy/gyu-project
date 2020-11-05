@@ -5,14 +5,14 @@ const TodoGlobal = ({
   delayMain,
   onAuthClose,
   onAuthLogout,
-  onAuthCheck,
+  // onAuthCheck,
   loginOrLogout,
 }) => {
   return (
     <div className="hcontrol">
-      <button type="button" onClick={onAuthCheck}>
+      {/* <button type="button" onClick={onAuthCheck}>
         로그인 체크
-      </button>
+      </button> */}
       {!loginOrLogout ? (
         <button type="button" onClick={onAuthLogout}>
           로그아웃

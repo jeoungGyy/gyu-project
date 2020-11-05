@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import TodoTodoListSub from './TodoTodoListSub';
 import { Icon } from 'react-icons-kit';
 import { ic_more_vert, ic_priority_high } from 'react-icons-kit/md';
@@ -153,6 +154,13 @@ const TodoTodoList = ({
       )}
     </li>
   );
+};
+
+TodoTodoList.propTypes = {
+  info: PropTypes.shape({
+    tags: PropTypes.string,
+    subject: PropTypes.string,
+  }).isRequired,
 };
 
 export default TodoTodoList;
